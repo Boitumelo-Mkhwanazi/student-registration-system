@@ -1,0 +1,100 @@
+nav .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+nav .desktop-nav .left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.75rem;
+}
+
+nav .desktop-nav .left .left-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav .desktop-nav .left ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+nav .desktop-nav .left ul li a {
+    padding: 0.5rem 0;
+    position: relative;
+    cursor: pointer;
+}
+
+nav .desktop-nav .left ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2.5px;
+    width: 0%;
+    background: var(--navy-blue);
+    transition: width 0.3s ease-in-out;
+}
+
+nav .desktop-nav .left ul li a:hover::before {
+    width: 100%;
+}
+
+nav .desktop-nav .right {
+    display: flex;
+    gap: 0.5rem;
+}
+
+nav .desktop-nav .right a {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+}
+
+nav .desktop-nav .right a:nth-child(1) {
+    background-color: transparent;
+    color: var(--navy-blue);
+}
+
+nav .desktop-nav .menu-button {
+    background-color: transparent;
+    border: none;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav .desktop-nav .menu-button .menu-icon,
+nav .desktop-nav .menu-button .menu-icon::before,
+nav .desktop-nav .menu-button .menu-icon::after {
+    background-color: var(--navy-blue);
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+nav .desktop-nav .menu-button .menu-icon::before,
+nav .desktop-nav .menu-button .menu-icon::after {
+    content: "";
+}
+
+nav .desktop-nav .menu-button .menu-icon::before {
+    transform: translate(-20px, -12px);
+}
+
+nav .desktop-nav .menu-button .menu-icon::after {
+    transform: translate(-20px, 12px);
+}

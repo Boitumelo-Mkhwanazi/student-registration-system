@@ -13,3 +13,16 @@ body {
     --navy-blue: #191645;
     --sky-blue: #43C6AC;
 }
+
+p, span, ion-icon {
+    color: var(--navy-blue);
+}
+
+a {
+    text-decoration: none;
+    color: var(--navy-blue);
+}
+
+li {
+    list-style: none;
+}

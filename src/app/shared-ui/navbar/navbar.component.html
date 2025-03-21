@@ -1,0 +1,23 @@
+<nav>
+    <div class="desktop-nav">
+        <div class="left">
+            <div class="left-logo" routerLink="/home">
+                <ion-icon name="logo-amazon"></ion-icon>
+                <span>AWS School</span>
+            </div>
+            <ul>
+                @for(linkItem of linksArray; track linkItem.id) {
+                    <app-link-item [inputData]="linkItem" />
+                }
+            </ul>
+        </div>
+        <div class="right">
+            <a href="">Log in</a>
+            <a href="">Sign up</a>
+        </div>
+        <button class="menu-button">
+            <div class="menu-icon"></div>
+        </button>
+    </div>
+    <div class="mobile-nav"></div>
+</nav>
