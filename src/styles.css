@@ -31,5 +31,5 @@ li {
     background-color: var(--navy-blue);
     color: var(--white);
     padding: 0.5rem 1rem;
-    border-radius: 3px;
+    border-radius: 5px;
 }

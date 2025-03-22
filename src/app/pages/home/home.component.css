@@ -1,0 +1,79 @@
+#hero {
+    padding: 6rem 5rem 1rem 5rem;
+}
+
+#hero .inner-hero {
+    background-color: var(--sky-blue);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 5rem;
+    border-radius: 20px;
+}
+
+#hero .inner-hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+#hero .inner-hero .hero-text h2 {
+    width: 90%;
+    color: var(--navy-blue);
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+#hero .inner-hero .hero-text p {
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+#hero .inner-hero img {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    #hero {
+        padding: 3rem 0 0 0;
+    }
+
+    #hero .inner-hero {
+        flex-direction: column;
+        padding: 0.5rem;
+        border-radius: 0px;
+        gap: 1.5rem;
+    }
+
+    #hero .inner-hero .hero-text {
+        padding-top: 2rem;
+    }
+
+    #hero .inner-hero .hero-text h2,
+    #hero .inner-hero .hero-text p {
+        text-align: center;
+    }
+
+    #hero .inner-hero .hero-text h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 1.2;
+        word-break: break-word;
+    }
+    
+
+    #hero .inner-hero .hero-text p {
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+
+    #hero .inner-hero .hero-text div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

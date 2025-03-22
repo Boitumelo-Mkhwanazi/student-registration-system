@@ -8,8 +8,13 @@ nav .desktop-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
-
+    padding: 1rem 5rem;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
 }
 
 nav .desktop-nav .left {
@@ -118,7 +123,7 @@ nav .mobile-nav {
     display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     nav .desktop-nav {
         padding: 1rem;
     }
@@ -168,23 +173,21 @@ nav .mobile-nav {
     nav .mobile-nav {
         background-color: #ececec;
         height: calc(100vh - 62px);
-        width: 100vw; /* Full width */
+        width: 100vw;
         padding-bottom: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: fixed;
         top: 62px;
-        right: -100vw; /* Start completely off-screen */
+        right: -100vw;
         transition: right 0.3s ease-in-out;
+        width: 100%;
     }
     
     nav .mobile-nav.open {
-        right: 0; /* Slide into view */
+        right: 0;
     }
-    
-    
-    
 
     nav .mobile-nav ul li {
         padding: 0.5rem 1rem;
