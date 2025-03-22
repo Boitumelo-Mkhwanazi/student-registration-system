@@ -12,9 +12,10 @@ body {
     --white: #FFFFFF;
     --navy-blue: #191645;
     --sky-blue: #43C6AC;
+    --skylight-blue: #b8fff1;
 }
 
-p, span, ion-icon {
+p, span, ion-icon, h1, h2, h3 {
     color: var(--navy-blue);
 }
 

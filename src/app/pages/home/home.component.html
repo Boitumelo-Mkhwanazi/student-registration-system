@@ -13,3 +13,15 @@
         <img src="hero.png" alt="">
     </div>
 </section>
+
+<section id="desc">
+    <div class="desc-header">
+        <h2>Manage your courses in <br> a single system</h2>
+        <p>Who is it for?</p>
+    </div>
+    <div class="desc-cards">
+        @for(card of cardsArray; track card.id) {
+            <app-card-manage [cardData]="card"/>
+        }
+    </div>
+</section>
