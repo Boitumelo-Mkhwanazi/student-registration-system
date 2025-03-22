@@ -18,3 +18,7 @@ li a::before {
 li a:hover::before {
     width: 100%;
 }
+
+li a.active-link::before {
+    width: 100%;
+}

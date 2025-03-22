@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { navLink } from '../../../services/navbar.service';
 import { RouterLink } from '@angular/router';
 
@@ -10,4 +10,10 @@ import { RouterLink } from '@angular/router';
 })
 export class LinkItemComponent {
   inputData = input.required<navLink>();
+  selectedLink = input.required<boolean>();
+  outputData = output<string>();
+
+  onOnputData() {
+    this.outputData.emit(this.inputData().id);
+  }
 }

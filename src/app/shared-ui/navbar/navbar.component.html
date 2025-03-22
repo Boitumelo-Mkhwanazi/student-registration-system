@@ -7,17 +7,27 @@
             </div>
             <ul>
                 @for(linkItem of linksArray; track linkItem.id) {
-                    <app-link-item [inputData]="linkItem" />
+                    <app-link-item [inputData]="linkItem" (outputData)="onSetLinkActive($event)" [selectedLink]="selectedLinkId === linkItem.id" />
                 }
             </ul>
         </div>
         <div class="right">
-            <a href="">Log in</a>
-            <a href="">Sign up</a>
+            <a href="" class="btn">Log in</a>
+            <a href="" class="btn">Sign up</a>
         </div>
-        <button class="menu-button">
+        <button class="menu-button" [class.open]="isMenuOpen" (click)="onOpenMenu()">
             <div class="menu-icon"></div>
         </button>
     </div>
-    <div class="mobile-nav"></div>
+    <div class="mobile-nav" [class.open]="isMenuOpen">
+        <ul>
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="/about">About Us</a></li>
+            <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+        <div class="right">
+            <a href="" class="btn">Log in</a>
+            <a href="" class="btn">Sign up</a>
+        </div>        
+    </div>
 </nav>
