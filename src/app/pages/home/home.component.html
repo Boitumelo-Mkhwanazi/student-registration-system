@@ -25,3 +25,17 @@
         }
     </div>
 </section>
+
+<section id="guide">
+    <div class="inner-guide">
+        <div class="header">
+            <span>Steps</span>
+            <h2>Your Journey Made Simple.</h2>
+        </div>
+        <div class="steps-cards">
+            @for(step of stepsArray; track step.id) {
+                <app-card-step [stepData]="step" />
+            }
+        </div>
+    </div>
+</section>

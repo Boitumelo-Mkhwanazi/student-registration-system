@@ -1,0 +1,33 @@
+.card {
+    width: 100%;
+    background-color: #322f5f;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border-radius: 10px;
+}
+
+.card h1,
+.card .card-text h3,
+.card .card-text p {
+    color: var(--white);
+}
+
+.card h1 {
+    font-size: 70px;
+    margin-bottom: -10px;
+    font-weight: 500;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(180, 180, 180, 0.6), #19164500); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card .card-text h3 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card .card-text p {
+    color: #5d598a;
+    font-weight: 400;
+}

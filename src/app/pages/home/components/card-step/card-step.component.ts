@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { stepCardType } from '../../../../services/home.service';
 
 @Component({
   selector: 'app-card-step',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './card-step.component.css'
 })
 export class CardStepComponent {
-
+  stepData = input.required<stepCardType>();
 }

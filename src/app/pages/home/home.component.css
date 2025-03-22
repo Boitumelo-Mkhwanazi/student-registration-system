@@ -62,6 +62,37 @@
     gap: 1.5rem;
 }
 
+#guide {
+    padding: 2rem 5rem 1rem 5rem;
+}
+
+#guide .inner-guide {
+    background-color: var(--navy-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 5rem;
+    border-radius: 20px;
+}
+
+#guide .inner-guide .header span {
+    color: #5d598a;
+}
+
+#guide .inner-guide .header h2 {
+    color: var(--white);
+}
+
+#guide .inner-guide .header h2  {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+#guide .inner-guide .steps-cards {
+    display: flex;
+    gap: 1rem;
+}
 
 @media (max-width: 767px) {
     #hero {
@@ -121,5 +152,30 @@
     #desc .desc-cards {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    #guide {
+        padding: 2rem 0rem 0rem 0rem;
+    }
+
+    #guide .inner-guide {
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        border-radius: 0px;
+    }
+
+    #guide .inner-guide .header {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    #guide .inner-guide .header h2 {
+        font-size: 1.25rem;
+        line-height: 30px;
+    }
+
+    #guide .inner-guide .steps-cards {
+        display: flex;
+        flex-direction: column;
     }
 }
