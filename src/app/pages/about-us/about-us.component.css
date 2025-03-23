@@ -186,4 +186,73 @@
         align-items: center;
     }
 
+    #team {
+        padding: 1rem;
+
+    }
+
+    #team .team-header .text h3 {
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    #team .team-header h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        width: 100%;
+    }
+
+    #team .team-header .mission-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    #team .team-header .mission-text .line {
+        height: 1px;
+    }
+    
+    #team .team-header .mission-text p {
+        font-size: 0.85rem;
+    }
+
+    #team .team-members {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    #team .team-members .team-member {
+        margin-bottom: 0.5rem;
+    }
+
+    #team .team-members .team-member h2 {
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+    
+    #team .team-members .team-member .info .text {
+        gap: 0.25rem;
+    }
+
+    #team .team-members .team-member .info .text h3 {
+        font-size: 0.85rem;
+        font-weight: 400;
+    }
+
+    #team .team-members .team-member .info .text .dot {
+        height: 5px;
+        width: 5px;
+    }
+
+    #team .team-members .team-member .icon {
+        top: 5px;
+        right: 5px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
 }
