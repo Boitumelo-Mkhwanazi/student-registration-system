@@ -1,0 +1,189 @@
+#hero {
+    padding: 6rem 5rem 1rem 5rem;
+}
+
+#hero .inner-hero {
+    background-color: var(--sky-blue);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 5rem;
+    border-radius: 20px;
+}
+
+#hero .inner-hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+#hero .inner-hero .hero-text h2 {
+    width: 90%;
+    color: var(--navy-blue);
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+#hero .inner-hero .hero-text p {
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+#hero .inner-hero img {
+    width: 100%;
+}
+
+#team {
+    padding: 3rem 5rem 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#team .team-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#team .team-header .text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#team .team-header .text .dot {
+    height: 10px;
+    width: 10px;
+    background-color: var(--sky-blue);
+    border-radius: 50%;
+}
+
+#team .team-header .text h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#team .team-header h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+    width: 95%;
+}
+
+#team .team-header .mission-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#team .team-header .mission-text .line {
+    height: 1.5px;
+    width: 80%;
+    background-color: #d5d5d5;
+}
+
+#team .team-header .mission-text p {
+    color: #949292;
+}
+
+#team .team-members {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+#team .team-members .team-member {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#team .team-members .team-member img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#team .team-members .team-member h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+#team .team-members .team-member .info .text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#team .team-members .team-member .info .text .dot {
+    height: 10px;
+    width: 10px;
+    background-color: var(--sky-blue);
+    border-radius: 50%;
+}
+
+#team .team-members .team-member .info .text h3 {
+    font-weight: 400;
+}
+
+#team .team-members .team-member .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    background-color: #a7ffed;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    #hero {
+        padding: 3rem 0 0 0;
+    }
+
+    #hero .inner-hero {
+        flex-direction: column;
+        padding: 0.5rem;
+        border-radius: 0px;
+        gap: 1.5rem;
+    }
+
+    #hero .inner-hero .hero-text {
+        padding-top: 2rem;
+    }
+
+    #hero .inner-hero .hero-text h2,
+    #hero .inner-hero .hero-text p {
+        text-align: center;
+    }
+
+    #hero .inner-hero .hero-text h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 1.2;
+        word-break: break-word;
+    }
+
+    #hero .inner-hero .hero-text p {
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+
+    #hero .inner-hero .hero-text div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
