@@ -1,0 +1,81 @@
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+}
+  
+dialog {
+    width: 90%;
+    max-width: 40rem;
+    display: flex;
+    gap: 1rem;
+    background-color: var(--white);
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    padding: 1rem;
+    top: 5rem;
+    margin: 10rem auto;
+}
+
+dialog img {
+    width: 45%;
+    border-radius: 7.5px;
+}
+
+dialog .details {
+    position: relative;
+}
+
+dialog .details .detail {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.5rem; 
+    align-items: self-start;
+}
+
+dialog .details .social-links {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 0rem;
+}
+
+dialog .details .social-links a {
+    position: relative;
+    color: var(--sky-blue);
+    padding-bottom: 0.2rem;
+}
+
+dialog .details .social-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--sky-blue);
+}
+
+dialog .details .close {
+    background-color: var(--sky-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+dialog .details .close ion-icon {
+    font-size: 20px;
+}

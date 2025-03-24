@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, input } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, input, output } from '@angular/core';
 import { memberType } from '../../../../services/about.service';
 
 @Component({
@@ -10,4 +10,9 @@ import { memberType } from '../../../../services/about.service';
 })
 export class MemberComponent {
   memberData = input.required<memberType>();
+  outputMemberData = output<string>();
+
+  onSelectUser() {
+    this.outputMemberData.emit(this.memberData().userId)
+  }
 }

@@ -1,0 +1,24 @@
+<div class="backdrop" (click)="onClose()">
+    <dialog open>
+        <img [src]="selectedMember().picture" [alt]="selectedMember().fullName">
+        <div class="details">
+            <div class="detail">
+                <div>Full Name: </div>
+                <div>{{ selectedMember().fullName }}</div>
+            </div>
+            <div class="detail">
+                <p>Course: </p>
+                <p>{{ selectedMember().course }}</p>
+            </div>
+            <div class="detail">
+                <p>Role: </p>
+                <p> {{ selectedMember().roles[0] }}, {{ selectedMember().roles[1] }}, {{ selectedMember().roles[2] }} </p>
+            </div>
+            <div class="social-links">
+                <a [href]="selectedMember().gitHub">GitHub</a>
+                <a [href]="selectedMember().linkedIn">LinkedIn</a>
+            </div>
+            <div class="close"><ion-icon name="close-outline"></ion-icon></div>
+        </div>
+    </dialog>
+</div>

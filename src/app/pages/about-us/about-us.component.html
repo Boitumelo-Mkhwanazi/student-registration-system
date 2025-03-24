@@ -1,3 +1,7 @@
+@if (dialogOpen) {
+    <app-member-dialogue [selectedMember]="selectedUserData!" (close)="closeDialog()"/>
+}
+
 <section id="hero">
     <div class="inner-hero">
         <div class="hero-text">
@@ -31,7 +35,7 @@
 
     <div class="team-members">
         @for(member of membersArray; track member.id) {
-            <app-member [memberData]="member"/>
+            <app-member [memberData]="member" (outputMemberData)="onSelectUser($event)"/>
         }
     </div>
 </section>
