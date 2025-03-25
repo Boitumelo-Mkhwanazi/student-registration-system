@@ -33,7 +33,7 @@ export class AboutService {
             picture: 'team-member.png',
             course: 'Computer Science',
             roles: ['Database Designer', 'Full Stack Developer'],
-            gitHub: 'https://github.com/Boitumelo-Mkhwanazi',
+            gitHub: 'https://github.com/heis-sn3',
             linkedIn: 'https://www.linkedin.com/in/sne-cs'
         },
         {
@@ -57,5 +57,35 @@ export class AboutService {
             gitHub: 'https://github.com/RethabileK',
             linkedIn: 'www.linkedin.com/in/rethabile-khumalo-83a0a6217'
         },
+        {
+            id: '5',
+            userId: 'u5',
+            fullName: 'Piet Ribana',
+            picture: 'team-member.png',
+            course: 'Computer Science',
+            roles: ['Front-end Developer'],
+            gitHub: 'https://github.com/PietRibana',
+            linkedIn: 'https://za.linkedin.com/in/kgomotso-ribana-770bab31a'
+        },
+        {
+            id: '6',
+            userId: 'u6',
+            fullName: 'Bongi Magudulela',
+            picture: 'team-member.png',
+            course: 'Computer Science',
+            roles: ['Front-end Developer'],
+            gitHub: 'https://github.com/BongiweMagudulela',
+            linkedIn: 'https://www.linkedin.com/in/bongiwe-magudulela-3b505830b'
+        },
+        {
+            id: '7',
+            userId: 'u7',
+            fullName: 'Thabiso Mawela',
+            picture: 'team-member.png',
+            course: 'Computer Science',
+            roles: ['Front-end Developer'],
+            gitHub: 'https://github.com/IsaacThabiso',
+            linkedIn: 'https://www.linkedin.com/in/isaac-thabiso-mawela-297a70357/'
+        }
     ]
 }

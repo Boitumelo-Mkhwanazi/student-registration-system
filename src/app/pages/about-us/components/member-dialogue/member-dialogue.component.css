@@ -20,7 +20,7 @@ dialog {
     overflow: hidden;
     padding: 1rem;
     top: 5rem;
-    margin: 10rem auto;
+    margin: 2.5rem auto;
 }
 
 dialog img {
@@ -78,4 +78,46 @@ dialog .details .close {
 
 dialog .details .close ion-icon {
     font-size: 20px;
+}
+
+dialog .details .social-links-mobile {
+    display: none;
+    margin-top: 1rem;
+}
+
+@media (max-width: 767px) {
+    dialog {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    dialog img {
+        max-height: 11rem;
+        width: 100%;
+    }
+
+    dialog .details .detail p {
+        font-size: 0.9rem;
+    }
+
+    dialog .details .social-links {
+        position: relative;
+        margin-top: 0.5rem;
+    }
+
+    dialog .details .social-links a {
+        font-size: 0.85rem;
+    }
+
+    dialog .details .close {
+        height: 16px;
+        width: 16px;
+    }
+    
+    dialog .details .close ion-icon {
+        font-size: 16px;
+    }
 }
