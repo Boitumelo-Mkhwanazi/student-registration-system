@@ -1,0 +1,146 @@
+#auth-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    height: 100vh;
+}
+
+#auth-container .auth .auth-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    height: 10vh;
+}
+
+#auth-container .auth .auth-header .auth-header-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+#auth-container .auth .auth-header .auth-header-left ion-icon {
+    font-size: 20px;
+}
+
+#auth-container .auth .auth-header .auth-header-left span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#auth-container .auth .auth-header .auth-header-right p {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+#auth-container .auth .auth-header .auth-header-right a {
+    color: var(--sky-blue);
+    font-weight: 500;
+}
+
+#auth-container .auth form {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#auth-container .auth form h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#auth-container .auth form .form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem 3rem;
+}
+
+#auth-container .auth form .names {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+#auth-container .auth form .names .input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#auth-container .auth form .names .input-container label,
+#auth-container .auth form .passwords .password-input label {
+    font-size: 0.75rem;
+}
+
+#auth-container .auth form .passwords {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333; 
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input:focus {
+    border-color: #43C6AC; 
+}
+
+.input::placeholder {
+    color: #888888;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#auth-container .auth-image-container {
+    background-color: var(--navy-blue);
+}
