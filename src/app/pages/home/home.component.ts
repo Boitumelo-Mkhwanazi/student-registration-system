@@ -4,13 +4,14 @@ import { CardManageComponent } from "./components/card-manage/card-manage.compon
 import { HomeService } from '../../services/home.service';
 import { CardStepComponent } from "./components/card-step/card-step.component";
 import { NavbarComponent } from '../../shared-ui/navbar/navbar.component';
+import { FooterComponent } from '../../shared-ui/footer/footer.component';
 
 @Component({
   selector: 'app-home',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  imports: [CardManageComponent, CardStepComponent, NavbarComponent]
+  imports: [CardManageComponent, CardStepComponent, NavbarComponent, FooterComponent]
 })
 export class HomeComponent {
   homeService = inject(HomeService);

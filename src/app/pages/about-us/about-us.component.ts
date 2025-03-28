@@ -3,10 +3,11 @@ import { MemberComponent } from "./components/member/member.component";
 import { AboutService } from '../../services/about.service';
 import { MemberDialogueComponent } from './components/member-dialogue/member-dialogue.component';
 import { NavbarComponent } from '../../shared-ui/navbar/navbar.component';
+import { FooterComponent } from '../../shared-ui/footer/footer.component';
 
 @Component({
   selector: 'app-about-us',
-  imports: [MemberComponent, MemberDialogueComponent, NavbarComponent],
+  imports: [MemberComponent, MemberDialogueComponent, NavbarComponent, FooterComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css'
