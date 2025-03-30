@@ -77,7 +77,7 @@ nav .desktop-nav .right a:nth-child(1) {
 }
 
 nav .desktop-nav .right a:nth-child(1):hover {
-    background-color: var(--sky-blue)
+    background-color: var(--sky-blue);
 }
 
 nav .desktop-nav .menu-button {
