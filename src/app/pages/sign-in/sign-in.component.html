@@ -15,31 +15,40 @@
             </div>
         </div>
         <div class="form-container">
-            <form action="">
+            <form action="" [formGroup]="form">
                 <h2>Create an account</h2>
                 <div class="form">
-                    <div class="names">
+                    <div class="names" formGroupName="names">
                         <div class="input-container">
                             <label for="first-name">First name</label>
-                            <input id="first-name" type="text" name="first-name" placeholder="Boitumelo" class="input">
+                            <input id="first-name" type="text" name="first-name" placeholder="Boitumelo" class="input" formControlName="firstName">
                         </div>
                         <div class="input-container">
                             <label for="last-name">Last name</label>
-                            <input id="last-name" type="text" name="last-name" placeholder="Mkhwanazi" class="input">
+                            <input id="last-name" type="text" name="last-name" placeholder="Mkhwanazi" class="input" formControlName="lastName">
                         </div>
                     </div>
-                    <div class="passwords">
+                    <div class="passwords" formGroupName="security">
                         <div class="password-input">
                             <label for="email">Email</label>
-                            <input id="email" type="email" name="email" placeholder="b_mkwanazi@icloud.com" class="input">
+                            <input id="email" type="email" name="email" placeholder="b_mkwanazi@icloud.com" class="input" formControlName="email">
+                            @if(isEmailInvalid) {
+                                <p>Enter a valid email</p>
+                            }
                         </div>
                         <div class="password-input">
                             <label for="password">Password</label>
-                            <input id="password" type="text" name="password" placeholder="Password(min 8 characters)" class="input">
+                            <input id="password" type="text" name="password" placeholder="Password(min 8 characters)" class="input" formControlName="password">
+                            @if(isPasswordValid) {
+                                <p>Enter a valid password(min-length of 6 characters)</p>
+                            }
                         </div>
                         <div class="password-input">
                             <label for="confirm-password">Confirm Password</label>
-                            <input id="confirm-password" type="text" name="confirm-password" placeholder="Password(min 8 characters)" class="input">
+                            <input id="confirm-password" type="text" name="confirm-password" placeholder="Password(min 8 characters)" class="input" formControlName="confirmPassword">
+                            @if(isConfirmPasswordValid) {
+                                <p>Enter a valid password(min-length of 6 characters)</p>
+                            }
                         </div>
                     </div>
                 </div>
