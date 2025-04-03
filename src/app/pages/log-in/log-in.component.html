@@ -15,17 +15,23 @@
             </div>
         </div>
         <div class="form-container">
-            <form action="">
+            <form action="" [formGroup]="form">
                 <h2>Sign into your account.</h2>
-                <div class="form">
+                <div class="form" formGroupName="security">
                     <div class="passwords">
                         <div class="password-input">
                             <label for="email">Email</label>
-                            <input id="email" type="email" name="email" placeholder="b_mkwanazi@icloud.com" class="input">
+                            <input id="email" type="email" name="email" placeholder="b_mkwanazi@icloud.com" class="input" formControlName="email">
+                            @if(isEmailInvalid) {
+                                <p>Enter a valid email</p>
+                            }
                         </div>
                         <div class="password-input">
                             <label for="password">Password</label>
-                            <input id="password" type="text" name="password" placeholder="Password(min 8 characters)" class="input">
+                            <input id="password" type="text" name="password" placeholder="Password(min 6 characters)" class="input" formControlName="password">
+                            @if(isPasswordInvalid) {
+                                <p>Enter a valid password(min-length of 6 characters)</p>
+                            }
                         </div>
                     </div>
                 </div>

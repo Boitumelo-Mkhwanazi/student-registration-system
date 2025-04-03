@@ -96,16 +96,6 @@
     transition: border-color 0.3s ease-in-out;
 }
 
-.input:focus {
-    border-color: #43C6AC; 
-}
-
-.input::placeholder {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #d5d5d5;
-}
-
 #auth-container .auth .form-container form a {
     color: #43C6AC;
     width: 100%;
@@ -124,6 +114,27 @@
     background-color: transparent;
     color: var(--navy-blue);
     border: #ffffff;
+}
+
+.input:focus {
+    border-color: #43C6AC;
+    background-color: #cffff5;
+}
+
+.input::placeholder {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d5d5d5;
+}
+
+.input.ng-invalid.ng-touched.ng-dirty {
+    background-color: #fbdcd6;
+    border-color: #f84e2c;
+}
+
+.passwords .password-input p {
+    font-size: 0.75rem;
+    color: #f84e2c;
 }
 
 @media (max-width: 767px) {

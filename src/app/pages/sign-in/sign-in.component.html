@@ -38,14 +38,14 @@
                         </div>
                         <div class="password-input">
                             <label for="password">Password</label>
-                            <input id="password" type="text" name="password" placeholder="Password(min 8 characters)" class="input" formControlName="password">
+                            <input id="password" type="text" name="password" placeholder="Password(min 6 characters)" class="input" formControlName="password">
                             @if(isPasswordValid) {
                                 <p>Enter a valid password(min-length of 6 characters)</p>
                             }
                         </div>
                         <div class="password-input">
                             <label for="confirm-password">Confirm Password</label>
-                            <input id="confirm-password" type="text" name="confirm-password" placeholder="Password(min 8 characters)" class="input" formControlName="confirmPassword">
+                            <input id="confirm-password" type="text" name="confirm-password" placeholder="Password(min 6 characters)" class="input" formControlName="confirmPassword">
                             @if(isConfirmPasswordValid) {
                                 <p>Enter a valid password(min-length of 6 characters)</p>
                             }
