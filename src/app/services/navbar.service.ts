@@ -16,13 +16,14 @@ export class NavbarService {
         },
         {
             id: 'u2',
-            name: 'Contact Us',
-            link: 'contact'
+            name: 'About Us',
+            link: 'about'
         },
         {
             id: 'u3',
-            name: 'About Us',
-            link: 'about'
-        }
+            name: 'Contact Us',
+            link: 'contact'
+        },
+        
     ]
 }

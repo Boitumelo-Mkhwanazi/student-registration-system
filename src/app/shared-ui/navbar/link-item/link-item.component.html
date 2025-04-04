@@ -1,1 +1,1 @@
-<li><a [routerLink]="'/'+ inputData().link" (click)="onOnputData()" [class.active-link]="selectedLink()">{{ inputData().name }}</a></li>
+<li><a [href]="inputData().link" (click)="onOnputData()" [class.active-link]="selectedLink()">{{ inputData().name }}</a></li>
