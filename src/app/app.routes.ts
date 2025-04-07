@@ -5,6 +5,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { FooterComponent } from './shared-ui/footer/footer.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
+import { CoursesComponent } from './pages/courses/courses.component';
 
 export const routes: Routes = [
     {
@@ -26,5 +27,9 @@ export const routes: Routes = [
     {
         path: 'log-in',
         component: LogInComponent,
+    },
+    {
+        path: 'courses',
+        component: CoursesComponent,
     }
 ];

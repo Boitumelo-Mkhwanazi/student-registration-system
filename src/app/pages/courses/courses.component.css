@@ -1,0 +1,76 @@
+#hero {
+    padding: 6rem 5rem 0rem 5rem;
+}
+
+#hero img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#courses-container {
+    padding: 2rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+#courses-container .courses-header {
+    margin-bottom: 2rem;
+}
+
+#courses-container .courses-header h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+}
+
+#courses-container .courses-header p {
+    color: #a09d9d;
+}
+
+#courses-container .courses-main .courses-main-header {
+    display: flex;
+    padding: 0rem 5rem 0rem 5rem;
+}
+
+#courses-container .courses-main .courses-main-header h4 {
+    position: relative;
+    font-size: 1;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#courses-container .courses-main .courses-main-header h4::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.15rem;
+    background-color: var(--navy-blue);
+    transition: all 0.3s ease-in-out;
+}
+
+#courses-container .courses-main .courses-main-header h4:hover:before {
+    width: 50%;
+}
+
+#courses-container .courses-main .courses-main-header h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0.15rem;
+    background-color: var(--navy-blue);
+    transition: all 0.3s ease-in-out;
+}
+
+#courses-container .courses-main .courses-main-header h4:hover::after {
+    width: 50%;
+}
+
+#courses-container .courses-main .courses-cards {
+    height: 10rem;
+    background-color: #f0f8ff;
+}
