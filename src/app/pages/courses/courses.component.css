@@ -29,14 +29,15 @@
 
 #courses-container .courses-main .courses-main-header {
     display: flex;
+    justify-content: center;
     padding: 0rem 5rem 0rem 5rem;
 }
 
 #courses-container .courses-main .courses-main-header h4 {
     position: relative;
     font-size: 1;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
+    font-weight: 400;
+    padding: 0.5rem 2rem;
     cursor: pointer;
 }
 
@@ -71,6 +72,6 @@
 }
 
 #courses-container .courses-main .courses-cards {
-    height: 10rem;
+    height: 20rem;
     background-color: #f0f8ff;
 }
