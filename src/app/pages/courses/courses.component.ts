@@ -1,6 +1,7 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { NavbarComponent } from "../../shared-ui/navbar/navbar.component";
 import { CourseComponent } from "./course/course.component";
+import { CourseService } from '../../services/courses.service';
 
 @Component({
   selector: 'app-courses',
@@ -10,5 +11,9 @@ import { CourseComponent } from "./course/course.component";
   styleUrl: './courses.component.css'
 })
 export class CoursesComponent {
-
+  coursesData = inject(CourseService);
+  
+  get coursesArray() {
+    return this.coursesData.courses;
+  }
 }

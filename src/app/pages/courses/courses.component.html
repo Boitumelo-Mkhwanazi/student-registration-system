@@ -16,14 +16,9 @@
             <h4>Engineering</h4>
         </div>
         <div class="courses-cards">
-            <app-course />
-            <app-course />
-            <app-course />
-            <app-course />
-            <app-course />
-            <app-course />
-            <app-course />
-            <app-course />
+            @for(course of coursesArray; track course.id) {
+                <app-course [courseData]="course"/>
+            }
         </div>
     </div>
 </section>
