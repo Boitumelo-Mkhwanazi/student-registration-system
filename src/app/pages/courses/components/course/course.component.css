@@ -14,6 +14,7 @@ img {
 
 .course img {
     border-radius: 0.5rem;
+    height: 12.5rem;
 }
 
 .course .course-details {
@@ -90,4 +91,67 @@ img {
 
 .course .course-details .course-details-footer a:hover::before {
     width: 100%;
+}
+
+.course .course-details .course-details-footer .open {
+    display: none;
+}
+
+@media (max-width: 767px) { 
+    .course {
+        gap: 0.5rem;
+        border-radius: 0.5rem;
+        padding: 0.25rem;
+    }
+    
+    .course img {
+        border-radius: 0.5rem;
+        height: 6.5rem;
+    }
+
+    .course .course-details .course-details-header p {
+        background-color: #f0f8ff;
+        font-size: 0.65rem;
+        border-radius: 2px;
+        padding: 0.25rem 0.2rem;
+    }
+    
+    .course .course-details .course-details-header .rating {
+        gap: 0.15rem;
+    }
+    
+    .course .course-details .course-details-header .rating ion-icon {
+        font-size: 0.75rem;
+    }
+
+    .course .course-details .course-details-header .rating span,
+    .course .course-details .course-details-footer .left p,
+    .course .course-details .course-details-footer .left span {
+        font-size: 0.75rem;
+    }
+
+    .course .course-details .title {
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+    
+    .course .course-details .course-details-footer {
+        margin-top: 0.25rem;
+        padding-top: 0.25rem;
+    }
+    
+    .course .course-details .course-details-footer .left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .course .course-details .course-details-footer a {
+        display: none;
+    }
+
+    .course .course-details .course-details-footer .open {
+        display: block;
+    }
 }

@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { NavbarComponent } from "../../shared-ui/navbar/navbar.component";
-import { CourseComponent } from "./course/course.component";
+import { CourseComponent } from "./components/course/course.component";
 import { CourseService } from '../../services/courses.service';
 
 @Component({

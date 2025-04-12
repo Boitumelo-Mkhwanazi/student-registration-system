@@ -29,7 +29,7 @@ export class CourseService {
     },
     {
       id: 'SCI102',
-      image: 'courses/data_science.avif',
+      image: 'courses/web_development.avif',
       title: 'Web Development',
       description: 'Learn full-stack web development with modern technologies.',
       instructor: 'Prof. Sarah Khan',
@@ -39,7 +39,7 @@ export class CourseService {
     },
     {
       id: 'SCI103',
-      image: 'courses/data_science.avif',
+      image: 'courses/artificial_intelligence.avif',
       title: 'Artificial Intelligence',
       description: 'Fundamentals of AI, deep learning, and neural networks.',
       instructor: 'Dr. Michael Adams',
@@ -51,7 +51,7 @@ export class CourseService {
     // Engineering Faculty
     {
       id: 'ENG201',
-      image: 'courses/data_science.avif',
+      image: 'courses/mechanical_engineering.avif',
       title: 'Mechanical Engineering',
       description: 'Study of mechanical systems and design principles.',
       instructor: 'Dr. John Smith',
@@ -61,7 +61,7 @@ export class CourseService {
     },
     {
       id: 'ENG202',
-      image: 'courses/data_science.avif',
+      image: 'courses/electrical_engineering.avif',
       title: 'Electrical Engineering',
       description:
         'Exploring electrical circuits, power systems, and electronics.',
@@ -72,7 +72,7 @@ export class CourseService {
     },
     {
       id: 'ENG203',
-      image: 'courses/data_science.avif',
+      image: 'courses/civil_engineering.avif',
       title: 'Civil Engineering',
       description: 'Infrastructure design, construction, and urban planning.',
       instructor: 'Dr. Michael Adams',
@@ -84,8 +84,8 @@ export class CourseService {
     // Health Science Faculty
     {
       id: 'HLT301',
-      image: 'courses/data_science.avif',
-      title: 'Anatomy and Physiology',
+      image: 'courses/medicine.avif',
+      title: 'Medicine',
       description: "Study of the human body's structure and function.",
       instructor: 'Dr. John Smith',
       faculty: 'Health Science',
@@ -94,7 +94,7 @@ export class CourseService {
     },
     {
       id: 'HLT302',
-      image: 'courses/data_science.avif',
+      image: 'courses/pharmacology.avif',
       title: 'Pharmacology',
       description: 'Understanding drugs and their effects on the human body.',
       instructor: 'Prof. Sarah Khan',
@@ -104,7 +104,7 @@ export class CourseService {
     },
     {
       id: 'HLT303',
-      image: 'courses/data_science.avif',
+      image: 'courses/bacteria.avif',
       title: 'Public Health',
       description: 'Examining healthcare policies and disease prevention.',
       instructor: 'Dr. Michael Adams',

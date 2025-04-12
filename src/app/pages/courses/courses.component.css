@@ -1,7 +1,3 @@
-img {
-    width: 100%;
-}
-
 #hero {
     padding: 6rem 5rem 0rem 5rem;
 }
@@ -83,4 +79,46 @@ img {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
     padding: 1rem 5rem 0rem 5rem;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 767px) {
+    #hero {
+        padding: 3rem 0 0 0;
+        height: 50vh;
+    }
+
+    #hero img {
+        border-radius: 0px;
+        height: 100%;
+    }
+
+    #courses-container {
+        padding: 0.5rem 0rem 0.5rem 0rem;
+    }
+    
+    #courses-container .courses-header {
+        margin-bottom: 0.25rem;
+    }
+    
+    #courses-container .courses-header h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.6rem;
+    }
+
+    #courses-container .courses-main .courses-main-header {
+        padding: 0rem 1rem 0rem 1rem;
+        overflow-x: scroll;
+    }
+    
+    #courses-container .courses-main .courses-main-header h4 {
+        padding: 0.25rem 0.5rem;
+    }
+
+    #courses-container .courses-main .courses-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        padding: 1rem 0.5rem 0rem 0.5rem;
+    }
 }
