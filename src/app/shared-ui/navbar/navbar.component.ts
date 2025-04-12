@@ -13,7 +13,7 @@ import { LinkItemComponent } from './link-item/link-item.component';
 export class NavbarComponent {
   links = inject(NavbarService);
   isMenuOpen : boolean = false;
-  selectedLinkId : string = 'u2';
+  selectedLinkId !: string;
 
   get linksArray () {
     return this.links.navLinks;

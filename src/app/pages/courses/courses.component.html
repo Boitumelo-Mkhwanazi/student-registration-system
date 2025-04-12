@@ -10,10 +10,10 @@
     </div>
     <div class="courses-main">
         <div class="courses-main-header">
-            <h4>All</h4>
-            <h4>Health Sci</h4>
-            <h4>Science</h4>
-            <h4>Engineering</h4>
+            <h4 (click)="onSelectFaculty('All')" [class.active]="'All' === selectedFaculty()">All</h4>
+            <h4 (click)="onSelectFaculty('Health Science')" [class.active]="'Health Science' === selectedFaculty()">Health Sci</h4>
+            <h4 (click)="onSelectFaculty('Science')" [class.active]="'Science' === selectedFaculty()">Science</h4>
+            <h4 (click)="onSelectFaculty('Engineering')" [class.active]="'Engineering' === selectedFaculty()">Engineering</h4>
         </div>
         <div class="courses-cards">
             @for(course of coursesArray; track course.id) {

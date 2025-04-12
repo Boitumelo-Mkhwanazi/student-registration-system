@@ -71,6 +71,20 @@
     width: 50%;
 }
 
+#courses-container .courses-main .courses-main-header h4.active {
+    color: var(--sky-blue);
+}
+
+#courses-container .courses-main .courses-main-header h4.active:before {
+    background-color: var(--sky-blue);
+    width: 50%;
+}
+
+#courses-container .courses-main .courses-main-header h4.active:after {
+    background-color: var(--sky-blue);
+    width: 50%;
+}
+
 /* CARDS */
 
 #courses-container .courses-main .courses-cards {

@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, signal } from '@angular/core';
 import { NavbarComponent } from "../../shared-ui/navbar/navbar.component";
 import { CourseComponent } from "./components/course/course.component";
 import { CourseService } from '../../services/courses.service';
@@ -12,8 +12,20 @@ import { CourseService } from '../../services/courses.service';
 })
 export class CoursesComponent {
   coursesData = inject(CourseService);
+  selectedFaculty = signal('All');
   
   get coursesArray() {
+    if (this.selectedFaculty() == 'Health Science') {
+      return this.coursesData.courses.filter((course) => course.faculty === 'Health Science')
+    } else if (this.selectedFaculty() == 'Science') {
+      return this.coursesData.courses.filter((course) => course.faculty === 'Science')
+    } else if (this.selectedFaculty() == 'Engineering') {
+      return this.coursesData.courses.filter((course) => course.faculty === 'Engineering')
+    }
     return this.coursesData.courses;
+  }
+
+  onSelectFaculty(faculty: string) {
+    this.selectedFaculty.set(faculty);
   }
 }
