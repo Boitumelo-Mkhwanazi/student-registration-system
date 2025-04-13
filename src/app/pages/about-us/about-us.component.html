@@ -1,6 +1,3 @@
-@if (dialogOpen) {
-    <app-member-dialogue [selectedMember]="selectedUserData!" (close)="closeDialog()"/>
-}
 <app-navbar />
 <section id="hero">
     <div class="inner-hero">
@@ -35,9 +32,10 @@
 
     <div class="team-members">
         @for(member of membersArray; track member.id) {
-            <app-member [memberData]="member" (outputMemberData)="onSelectUser($event)"/>
+            <app-member [memberData]="member"/>
         }
     </div>
 </section>
 
+<router-outlet>
 <app-footer />

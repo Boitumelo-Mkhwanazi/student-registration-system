@@ -7,5 +7,5 @@
             <h3>{{ memberData().roles[0] }}</h3>
         </div>
     </div>
-    <div class="icon" (click)="onSelectUser()"><ion-icon name="open-outline"></ion-icon></div>
+    <a [routerLink]="['/about', memberData().fullName]" class="icon"><ion-icon name="open-outline"></ion-icon></a>
 </div>

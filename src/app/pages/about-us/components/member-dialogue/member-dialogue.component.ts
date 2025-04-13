@@ -1,5 +1,5 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, input, output } from '@angular/core';
-import { memberType } from '../../../../services/about.service';
+import { Component, computed, CUSTOM_ELEMENTS_SCHEMA, inject, input} from '@angular/core';
+import { AboutService } from '../../../../services/about.service';
 
 @Component({
   selector: 'app-member-dialogue',
@@ -9,10 +9,8 @@ import { memberType } from '../../../../services/about.service';
   styleUrl: './member-dialogue.component.css'
 })
 export class MemberDialogueComponent {
-  selectedMember = input.required<memberType>();
-  close = output<void>();
+  memberName = input.required<string>();
+  private aboutService = inject(AboutService)
 
-  onClose() {
-    this.close.emit();
-  }
+  selectedMember = computed(() => this.aboutService.members.find((member) => member.fullName === this.memberName())!);
 }
