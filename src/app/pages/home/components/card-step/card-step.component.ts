@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { stepCardType } from '../../../../services/home.service';
+import { stepCardType } from '../../../../services/pages/home.service';
 
 @Component({
   selector: 'app-card-step',

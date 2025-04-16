@@ -1,7 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, signal } from '@angular/core';
 import { NavbarComponent } from "../../shared-ui/navbar/navbar.component";
 import { CourseComponent } from "./components/course/course.component";
-import { CourseService } from '../../services/courses.service';
+import { CourseService } from '../../services/pages/courses.service';
 
 @Component({
   selector: 'app-courses',

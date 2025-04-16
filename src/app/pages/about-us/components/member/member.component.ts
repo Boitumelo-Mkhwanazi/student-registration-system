@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, input, output } from '@angular/core';
-import { memberType } from '../../../../services/about.service';
+import { memberType } from '../../../../services/pages/about.service';
 import { RouterLink } from '@angular/router';
 
 @Component({

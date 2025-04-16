@@ -1,60 +1,84 @@
 footer {
+    background-color: #f0f8ff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 2rem;
-    padding: 2rem 0;
-    padding: 6rem 5rem 1rem 5rem;
+    padding: 3.5rem 5rem 1rem 5rem;
 }
 
-footer .top-footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    gap: 4rem;
-    padding-bottom: 1rem;
-    border-bottom: 1.5px solid #bcb9b9;
-} 
+footer .top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
 
-footer .top-footer .logo {
+footer .top .left {
+    padding: 0 5rem 0 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+footer .top .left .top-header {
+    display: flex;
     align-items: center;
     gap: 0.5rem;
+}   
+
+footer .top .left .top-header .icon-container {
+    background-color: var(--skylight-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0.25rem;
 }
 
-footer .top-footer .logo ion-icon {
-    font-size: 20px;
+footer .top .left .top-header .icon-container ion-icon {
+    font-size: 1.5rem;
 }
 
-footer .top-footer .logo span {
+footer .top .left .top-header span {
     font-weight: 600;
 }
 
-footer .top-footer .nav-links {
+footer .top .left ul {
     display: flex;
-    flex-direction: column;
+    gap: 1.5rem;
 }
 
-footer .top-footer .nav-links p {
+footer .top .left ul li a {
+    position: relative;
     font-weight: 500;
-    margin-bottom: 1rem;
+    padding: 0.5rem 0;
 }
 
-footer .top-footer .nav-links a {
-    font-size: 0.85rem;
-    color: #bcb9b9;
+footer .top .left ul li a::before {
+    content: '';
+    background-color: var(--navy-blue);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2.5px;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
 }
 
-@media (max-width: 767px) {
-    footer {
-        padding: 1rem 0 0 0;
-    }
+footer .top .left ul li a:hover:before {
+    width: 100%;
+}
 
-    footer .top-footer {
-        padding-bottom: 0;
-        gap: 2rem;
-    } 
+footer .bottom {
+    border-top: 1px solid #d5d5d5;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0 0 1rem;
+}
+
+footer .bottom ul {
+    display: flex;
+    gap: 1rem;
+}
+
+footer .bottom ul li a ion-icon {
+    font-size: 1.5rem;
 }

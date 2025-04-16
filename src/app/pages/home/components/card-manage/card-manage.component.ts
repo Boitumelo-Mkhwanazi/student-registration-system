@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, input } from '@angular/core';
-import { cardType } from '../../../../services/home.service';
+import { cardType } from '../../../../services/pages/home.service';
 
 @Component({
   selector: 'app-card-manage',

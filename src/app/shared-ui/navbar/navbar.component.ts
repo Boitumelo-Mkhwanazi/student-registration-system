@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NavbarService } from '../../services/navbar.service';
+import { NavbarService } from '../../services/pages/navbar.service';
 import { LinkItemComponent } from './link-item/link-item.component';
 
 @Component({
