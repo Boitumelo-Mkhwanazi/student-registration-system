@@ -129,6 +129,85 @@
     padding: 1rem 5rem;
 }
 
+#newsletter {
+    padding: 1rem 5rem 2rem 5rem;
+}
+
+#newsletter .newsletter-container {
+    background: linear-gradient(270deg, #191645, var(--skylight-blue), #191645);
+    background-size: 600% 600%;
+    animation: gradientMove 10s ease infinite;
+    display: flex;
+    padding: 3rem 5rem;
+    border-radius: 20px;
+}
+
+#newsletter .newsletter-container h2 {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    width: 40%;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#newsletter .newsletter-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#newsletter .newsletter-container form .inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#newsletter .newsletter-container form p {
+    color: var(--white);
+    font-size: 0.85rem;
+}
+
+#newsletter .newsletter-container form .inputs input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid var(--white);
+    padding: 0.75rem 0 0.5rem 0;
+    color: var(--white); 
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#newsletter .newsletter-container form .inputs input:focus {
+    color: var(--sky-blue);
+    border-bottom: 1.5px solid var(--sky-blue);
+}
+
+#newsletter .newsletter-container form .inputs input:focus::placeholder {
+    color: var(--sky-blue);
+}
+
+#newsletter .newsletter-container form .inputs input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#newsletter .newsletter-container form button {
+    padding: 0.75rem 1.5rem;
+}
+
 @media (max-width: 767px) {
     #hero {
         padding: 3rem 0 0 0;
