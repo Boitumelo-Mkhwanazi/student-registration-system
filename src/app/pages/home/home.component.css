@@ -94,6 +94,41 @@
     gap: 1rem;
 }
 
+
+#featured-courses {
+    padding: 2rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+#featured-courses .courses-header {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#featured-courses .courses-header h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+}
+
+#featured-courses .courses-header p {
+    color: #a09d9d;
+    max-width: 40%;
+    text-align: center;
+}
+
+#featured-courses .courses-main .courses-cards {
+    background-color: #f0f8ff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem 5rem;
+}
+
 @media (max-width: 767px) {
     #hero {
         padding: 3rem 0 0 0;
@@ -177,5 +212,11 @@
     #guide .inner-guide .steps-cards {
         display: flex;
         flex-direction: column;
+    }
+
+    #courses-container .courses-main .courses-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        padding: 1rem 0.5rem;
     }
 }

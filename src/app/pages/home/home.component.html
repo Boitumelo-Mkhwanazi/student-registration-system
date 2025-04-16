@@ -42,4 +42,19 @@
     </div>
 </section>
 
+<section id="featured-courses">
+    <div class="courses-header">
+        <h2>Our Most Popular Courses</h2>
+        <p>Explore our most popular courses, handpicked based on student interest and feedback — 
+            a great starting point for your learning journey.</p>
+    </div>
+    <div class="courses-main">
+        <div class="courses-cards">
+            <app-course [courseData]="coursesArray[0]"/>
+            <app-course [courseData]="coursesArray[1]"/>
+            <app-course [courseData]="coursesArray[2]"/>
+        </div>
+    </div>
+</section>
+
 <app-footer />
