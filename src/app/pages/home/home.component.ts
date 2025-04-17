@@ -7,13 +7,14 @@ import { NavbarComponent } from '../../shared-ui/navbar/navbar.component';
 import { FooterComponent } from '../../shared-ui/footer/footer.component';
 import { CourseService } from '../../services/pages/courses.service';
 import { CourseComponent } from '../courses/components/course/course.component';
+import { NewsletterComponent } from "../../shared-ui/newsletter/newsletter.component";
 
 @Component({
   selector: 'app-home',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  imports: [CardManageComponent, CardStepComponent, NavbarComponent, FooterComponent, CourseComponent]
+  imports: [CardManageComponent, CardStepComponent, NavbarComponent, FooterComponent, CourseComponent, NewsletterComponent]
 })
 export class HomeComponent {
   homeService = inject(HomeService);
