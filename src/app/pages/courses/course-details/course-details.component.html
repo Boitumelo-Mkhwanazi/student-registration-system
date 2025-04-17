@@ -1,1 +1,63 @@
 <app-navbar />
+
+<section id="hero">
+    <div class="inner-hero">
+        <div class="hero-text">
+            <div class="description">
+                <p>Courses > <span>{{ selectedCourse().title }}</span></p>
+                <h2>{{ selectedCourse().title }}</h2>
+                <p>
+                    {{ selectedCourse().description }}
+                </p>
+            </div>
+            <div class="buttons-container">
+                <a href="/sign-up" class="btn">Enroll</a>
+                <div class="reviews">
+                    <span>{{ selectedCourse().rating }}</span>
+                    <div class="stars">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                </div>
+                <p>{{ selectedCourse().studentsCount }} students </p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img [src]="selectedCourse().image" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="main">
+    <div class="course-details-1">
+        <div class="course-description">
+            <h3>What You'll Learn</h3>
+            <p [class.show-all]="showingMore()">
+                In this course, you'll dive into the core concepts of data science, 
+                starting with data collection, cleaning, and analysis. 
+                You'll learn how to use tools like Python, Pandas, and SQL to manipulate data,
+                and uncover insights through data visualization with libraries like Matplotlib and Seaborn. 
+                The course will guide you through building machine learning models using scikit-learn, 
+                helping you understand key algorithms such as linear regression, decision trees, and
+                 clustering. By the end, you'll be able to turn raw data into actionable insights, 
+                solve real-world problems, and make data-driven decisions with confidence.
+            </p>
+            <div class="show-more">
+                @if (!showingMore()) {
+                    <span>Show more</span>
+                } @else {
+                    <span>Show less</span>
+                }
+                <div class="arrow-button" (click)="onShowMore()">
+                    <ion-icon name="chevron-down-outline" [class.rotate]="showingMore()"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="course-details-2">
+
+    </div>
+</section>
