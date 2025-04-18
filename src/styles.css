@@ -10,10 +10,12 @@ body {
 
 :root {
     --white: #FFFFFF;
+    --background-grey: #f5f5f5;
     --alice-blue: #f0f8ff;
     --navy-blue: #191645;
     --sky-blue: #43C6AC;
     --skylight-blue: #b8fff1;
+    --background-green: #dffff9;
 }
 
 p, span, ion-icon, h1, h2, h3, h4 {
