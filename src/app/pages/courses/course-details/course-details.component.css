@@ -470,4 +470,99 @@
         border-radius: 10px;
     }
 
+    /* MAIN-SECTION */
+    #main {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    #main .course-details-2 {
+        order: 1;
+    }
+
+    #main .course-details-1 {
+        gap: 1rem;
+        order: 2;
+    }
+
+    #main .course-details-1 .course-description {
+        border-radius: 10px; 
+        padding: 1rem;
+    }
+
+    #main .course-details-1 .course-instructor {
+        border-radius: 10px; 
+        padding: 1rem;
+    }
+    
+    #main .course-details-1 .course-instructor .instructor-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    #main .course-details-1 .course-instructor .instructor-container h3 {
+        font-weight: 500;
+    }
+    
+    #main .course-details-1 .course-instructor .instructor-container .instructor-image-container {
+        width: 60%;
+    }
+
+    #main .course-details-1 .course-instructor .instructor-container .instructor-information .mid .mid-1,
+    #main .course-details-1 .course-instructor .instructor-container .instructor-information .mid .mid-2 {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    #main .course-details-1 .course-instructor .instructor-container .instructor-information .mid {
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #main .course-details-1 .course-instructor .instructor-container .instructor-information .mid p {
+        font-size: 0.75rem;
+    }
+
+    #main .course-details-1 .course-instructor .instructor-container .instructor-information .mid .rating {
+        display: none;
+    }
+
+    #main .course-details-1 .course-instructor .instructor-container .instructor-information .mid .mid-2 {
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    #main .course-details-1 .course-instructor .instructor-container .instructor-information .mid .mid-2 .icon-container {
+        padding: 0.25rem;
+    }
+
+    #main .course-details-1 .course-instructor .instructor-container .instructor-information .mid .mid-2 .icon-container ion-icon {
+        font-size: 1rem;
+    }
+
+    #main .course-details-1 .course-instructor .instructor-container .instructor-information .social-media-icons {
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #main .course-details-1 .featured-courses {
+        padding: 0rem;
+    }
+
+    #main .course-details-1 .featured-courses .header h3 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    #main .course-details-1 .featured-courses .header a {
+        font-size: 0.85rem;
+        padding-bottom: 0.1rem;
+    }
 }
