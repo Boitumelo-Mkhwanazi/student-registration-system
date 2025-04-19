@@ -1,0 +1,16 @@
+/courses/Data%20Science
+/courses/Web%20Development
+/courses/Artificial%20Intelligence
+/courses/Mechanical%20Engineering
+/courses/Electrical%20Engineering
+/courses/Civil%20Engineering
+/courses/Medicine
+/courses/Pharmacology
+/courses/Public%20Health
+/about/Boitumelo%20Mkhwanazi
+/about/Sinenhlanhla%20Ntombela
+/about/Chipo%20Machava
+/about/Rethabile%20Khumalo
+/about/Piet%20Ribana
+/about/Bongi%20Magudulela
+/about/Thabiso%20Mawela

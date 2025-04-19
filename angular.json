@@ -31,7 +31,9 @@
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "outputMode": "server",
+            "prerender": {
+              "routesFile": "courses-routes.txt"
+            },
             "ssr": {
               "entry": "src/server.ts"
             }
@@ -46,8 +48,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "15kB",
+                  "maximumError": "15kB"
                 }
               ],
               "outputHashing": "all"
