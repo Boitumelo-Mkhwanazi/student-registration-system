@@ -1,6 +1,6 @@
 import { Component, computed, CUSTOM_ELEMENTS_SCHEMA, inject, input, signal } from '@angular/core';
 import { NavbarComponent } from "../../../shared-ui/navbar/navbar.component";
-import { CourseService } from '../../../services/pages/courses.service';
+import { CourseService } from '../../../services/shared-services/courses.service';
 import { CourseComponent } from "../components/course/course.component";
 import { NewsletterComponent } from "../../../shared-ui/newsletter/newsletter.component";
 import { FooterComponent } from "../../../shared-ui/footer/footer.component";

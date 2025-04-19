@@ -35,16 +35,7 @@
     <div class="course-details-1">
         <div class="course-description">
             <h3>What You'll Learn</h3>
-            <p [class.show-all]="showingMore()">
-                In this course, you'll dive into the core concepts of data science, 
-                starting with data collection, cleaning, and analysis. 
-                You'll learn how to use tools like Python, Pandas, and SQL to manipulate data,
-                and uncover insights through data visualization with libraries like Matplotlib and Seaborn. 
-                The course will guide you through building machine learning models using scikit-learn, 
-                helping you understand key algorithms such as linear regression, decision trees, and
-                 clustering. By the end, you'll be able to turn raw data into actionable insights, 
-                solve real-world problems, and make data-driven decisions with confidence.
-            </p>
+            <p [class.show-all]="showingMore()">{{ selectedCourse().detailed_description }}</p>
             <div class="show-more">
                 @if (!showingMore()) {
                     <span>Show more</span>
@@ -64,7 +55,7 @@
                 </div>
                 <div class="instructor-information">
                     <div class="header">
-                        <h3>Boitumelo Mkhwanazi</h3>
+                        <h3>{{ selectedCourse().instructorId }}</h3>
                         <p>Advanced Educator</p>
                     </div>
                     <div class="mid">
@@ -102,7 +93,7 @@
     </div>
     <div class="course-details-2"> 
         <div class="mid-container">
-            <h3>R150.00 <span>R150.00</span></h3>
+            <h3>R{{ selectedCourse().fee }} <span>R150.00</span></h3>
             <div class="enroll-text">
                 <a href="" class="btn">Enroll</a>
                 <p>Get the best learning experience</p>
