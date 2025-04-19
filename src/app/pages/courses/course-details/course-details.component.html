@@ -89,6 +89,16 @@
                 </div>
             </div>
         </div>
+        <div class="featured-courses">
+            <div class="header">
+                <h3>Related Courses</h3>
+                <a href="">View All Courses</a>
+            </div>
+            <div class="cards">
+                <app-course [courseData]="coursesArray[0]"/>
+                <app-course [courseData]="coursesArray[1]"/>
+            </div>
+        </div>
     </div>
     <div class="course-details-2"> 
         <div class="mid-container">
@@ -141,3 +151,7 @@
         </div>
     </div>
 </section>
+
+<app-newsletter />
+
+<app-footer />

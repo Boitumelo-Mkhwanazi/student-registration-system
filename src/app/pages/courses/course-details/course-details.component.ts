@@ -1,10 +1,13 @@
 import { Component, computed, CUSTOM_ELEMENTS_SCHEMA, inject, input, signal } from '@angular/core';
 import { NavbarComponent } from "../../../shared-ui/navbar/navbar.component";
 import { CourseService } from '../../../services/pages/courses.service';
+import { CourseComponent } from "../components/course/course.component";
+import { NewsletterComponent } from "../../../shared-ui/newsletter/newsletter.component";
+import { FooterComponent } from "../../../shared-ui/footer/footer.component";
 
 @Component({
   selector: 'app-course-details',
-  imports: [NavbarComponent],
+  imports: [NavbarComponent, CourseComponent, NewsletterComponent, FooterComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './course-details.component.html',
   styleUrl: './course-details.component.css'
@@ -12,7 +15,12 @@ import { CourseService } from '../../../services/pages/courses.service';
 export class CourseDetailsComponent {
   courseName = input.required<string>();
   showingMore = signal<boolean>(false);
-  private courseSerivice = inject(CourseService)
+  private courseSerivice = inject(CourseService);
+  private coursesData = inject(CourseService);
+
+  get coursesArray() {
+    return this.coursesData.courses;
+  }
 
   selectedCourse = computed(
     () => this.courseSerivice.courses.find((course) => course.title === this.courseName())!

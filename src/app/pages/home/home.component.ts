@@ -18,7 +18,7 @@ import { NewsletterComponent } from "../../shared-ui/newsletter/newsletter.compo
 })
 export class HomeComponent {
   homeService = inject(HomeService);
-  coursesData = inject(CourseService);
+  private coursesData = inject(CourseService);
 
   get coursesArray() {
     return this.coursesData.courses;
