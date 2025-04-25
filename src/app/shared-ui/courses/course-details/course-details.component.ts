@@ -1,9 +1,9 @@
 import { Component, computed, CUSTOM_ELEMENTS_SCHEMA, inject, input, signal } from '@angular/core';
-import { NavbarComponent } from "../../../shared-ui/navbar/navbar.component";
+import { NavbarComponent } from "../../navbar/navbar.component";
 import { CourseService } from '../../../services/shared-services/courses.service';
-import { CourseComponent } from "../components/course/course.component";
-import { NewsletterComponent } from "../../../shared-ui/newsletter/newsletter.component";
-import { FooterComponent } from "../../../shared-ui/footer/footer.component";
+import { CourseComponent } from "../course/course.component";
+import { NewsletterComponent } from "../../newsletter/newsletter.component";
+import { FooterComponent } from "../../footer/footer.component";
 
 @Component({
   selector: 'app-course-details',

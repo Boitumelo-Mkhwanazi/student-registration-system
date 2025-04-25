@@ -6,7 +6,7 @@ import { CardStepComponent } from "./components/card-step/card-step.component";
 import { NavbarComponent } from '../../shared-ui/navbar/navbar.component';
 import { FooterComponent } from '../../shared-ui/footer/footer.component';
 import { CourseService } from '../../services/shared-services/courses.service';
-import { CourseComponent } from '../courses/components/course/course.component';
+import { CourseComponent } from '../../shared-ui/courses/course/course.component';
 import { NewsletterComponent } from "../../shared-ui/newsletter/newsletter.component";
 
 @Component({
