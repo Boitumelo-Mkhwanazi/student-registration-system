@@ -62,7 +62,7 @@ export const routes: Routes = [
             },
             {
                 path: 'modules',
-                component: ModulesComponent
+                component: ModulesComponent 
             },
             {
               path: 'my-courses',

@@ -1,1 +1,59 @@
-<p>profile works!</p>
+<div class="main">
+    <form action="">
+        <div class="header">
+            <div class="text">
+                <h2>Your profile</h2>
+                <p>Update your personal information</p>
+            </div>
+            <div class="buttons">
+                <button type="reset">
+                    <ion-icon name="trash-bin-outline"></ion-icon>
+                    <span>Discard changes</span>
+                </button>
+                <button type="submit">Save</button>
+            </div>
+        </div>
+        <div class="profile-picture">
+            <div class="top">
+                <ion-icon name="image-outline"></ion-icon>
+                <span>Profile Picture</span>
+            </div>
+            <div class="container">
+                <img src="team-member.png" alt="">
+                <input type="file" accept="image/*">
+            </div>
+        </div>
+        <div class="personal-information">
+            <div class="top">
+                <ion-icon name="person-outline"></ion-icon>
+                <span>Personal information</span>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="control">
+                        <label for="name">First Name</label>
+                        <input type="text" name="first-name" id="name" placeholder="Boitumelo">
+                    </div>
+                    <div class="control">
+                        <label for="surname">Last Name</label>
+                        <input type="text" name="last-name" id="surname" placeholder="Mkhwanazi">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="control">
+                        <label for="email">Email</label>
+                        <input type="text" name="email-address" id="email" placeholder="b_mkhwanazi@icloud.com">
+                    </div>
+                    <div class="control">
+                        <label for="gender">Gender</label>
+                        <select name="category" id="gender">
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </form>
+</div>
