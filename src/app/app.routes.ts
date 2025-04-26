@@ -10,6 +10,11 @@ import { CourseDetailsComponent } from './shared-ui/courses/course-details/cours
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OverviewComponent } from './pages/dashboard/sub-pages/overview/overview.component';
 import { ProfileComponent } from './pages/dashboard/sub-pages/profile/profile.component';
+import { MyCoursesComponent } from './pages/dashboard/sub-pages/my-courses/my-courses.component';
+import { TimetableComponent } from './pages/dashboard/sub-pages/timetable/timetable.component';
+import { AssessmentsComponent } from './pages/dashboard/sub-pages/assessments/assessments.component';
+import { DepositComponent } from './pages/dashboard/sub-pages/deposit/deposit.component';
+import { ModulesComponent } from './pages/dashboard/sub-pages/modules/modules.component';
 
 export const routes: Routes = [
     {
@@ -56,9 +61,29 @@ export const routes: Routes = [
                 component: OverviewComponent
             },
             {
+                path: 'modules',
+                component: ModulesComponent
+            },
+            {
+              path: 'my-courses',
+              component: MyCoursesComponent  
+            },
+            {
+                path: 'timetable',
+                component: TimetableComponent
+            },
+            {
+                path: 'assessments',
+                component: AssessmentsComponent
+            },
+            {
                 path: 'profile',
                 component: ProfileComponent
             },
+            {
+                path: 'deposit',
+                component: DepositComponent
+            }
         ]
     }
 ];
