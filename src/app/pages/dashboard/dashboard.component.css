@@ -1,0 +1,176 @@
+img {
+    width: 4rem;
+    border-radius: 5px;
+}
+
+p, span, ion-icon {
+    color: var(--white);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 19rem 1fr;
+}
+
+.container aside {
+    position: relative;
+    background-color: var(--navy-blue);
+    height: 100vh;
+    padding: 1rem 1rem 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container aside .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container aside .top ion-icon {
+    font-size: 1.5rem;
+}
+
+.container aside .top .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container aside .content .user {
+    background-color: var(--sky-blue);
+    display: flex;
+    gap: 1rem;
+    border-radius: 7.5px;
+    padding: 0.45rem 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.container aside .content .user .details p {
+    color: var(--navy-blue);
+    font-size: 0.85rem;
+}
+
+.container aside .content .user .details p:first-child {
+    font-weight: 600;
+}
+
+.container aside .content .main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container aside .content .main .first p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.container aside .content .main .first .links-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container aside .content .main .first .links-container a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.25rem 0rem;
+    transition: padding 0.3s ease;
+}
+
+.container aside .content .main .first .links-container a:hover {
+    padding: 0.25rem 1rem;
+}
+
+.container aside .content .main .first .links-container a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1.5px;
+    height: 0%;
+    background-color: var(--white);
+    transition: height 0.3s ease;
+}
+
+.container aside .content .main .first .links-container a:hover::before {
+    height: 100%;
+}
+
+.container aside .content .main .first .links-container a ion-icon,
+.container aside .content .main .first .links-container a span {
+    color: #a0a0a0;
+}
+
+.container aside .content .main .first .links-container a span {
+    font-size: 0.95rem;
+}
+
+.container aside .log-out {
+    background-color: #0c083a;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.container aside .log-out ion-icon {
+    font-size: 1.25rem;
+}
+
+/*  MAIN  */
+
+.container main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+}
+
+.container main .header .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ececec;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.container main .header .search-bar ion-icon {
+    color: #afafaf;
+    font-size: 1.25rem;
+}
+.container main .header .search-bar input {
+    border: none;
+    background-color: #ececec;
+    padding: 0.85rem;
+    width: 100%;
+}
+
+.container main .header .search-bar input:focus {
+    outline: none;
+}
+
+.container main .header .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container main .header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}

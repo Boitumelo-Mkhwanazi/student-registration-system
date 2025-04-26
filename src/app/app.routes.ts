@@ -7,6 +7,9 @@ import { LogInComponent } from './pages/log-in/log-in.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { MemberDialogueComponent } from './pages/about-us/components/member-dialogue/member-dialogue.component';
 import { CourseDetailsComponent } from './shared-ui/courses/course-details/course-details.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { OverviewComponent } from './pages/dashboard/sub-pages/overview/overview.component';
+import { ProfileComponent } from './pages/dashboard/sub-pages/profile/profile.component';
 
 export const routes: Routes = [
     {
@@ -44,4 +47,18 @@ export const routes: Routes = [
             }
         ]
     },
+    {
+        path: 'dashboard',
+        component: DashboardComponent,
+        children: [
+            {
+                path: 'overview',
+                component: OverviewComponent
+            },
+            {
+                path: 'profile',
+                component: ProfileComponent
+            },
+        ]
+    }
 ];
