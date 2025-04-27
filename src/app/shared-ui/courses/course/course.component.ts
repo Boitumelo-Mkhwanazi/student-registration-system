@@ -11,4 +11,5 @@ import { RouterLink } from '@angular/router';
 })
 export class CourseComponent {
   courseData = input.required<courseType>();
+  activePage = input.required<string>();
 }

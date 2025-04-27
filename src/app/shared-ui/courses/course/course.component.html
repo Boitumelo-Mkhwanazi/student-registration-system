@@ -14,7 +14,11 @@
                 <ion-icon name="people-outline"></ion-icon>
                 <p> {{ courseData().studentsCount }} <span>students</span></p>
             </div>
-            <a [routerLink]="['/courses', courseData().title]" >Learn More</a>
+            @if(activePage() === 'Courses Page') {
+                <a [routerLink]="['/courses', courseData().title]" >Learn More</a>
+            } @else {
+                <a [routerLink]="['/dashboard/modules', courseData().title]" >Learn More</a>
+            }
             <a [routerLink]="['/courses', courseData().title]" class="open"><ion-icon name="open-outline"></ion-icon></a>
             
         </div>

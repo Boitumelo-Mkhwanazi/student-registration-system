@@ -15,6 +15,7 @@ import { TimetableComponent } from './pages/dashboard/sub-pages/timetable/timeta
 import { AssessmentsComponent } from './pages/dashboard/sub-pages/assessments/assessments.component';
 import { DepositComponent } from './pages/dashboard/sub-pages/deposit/deposit.component';
 import { ModulesComponent } from './pages/dashboard/sub-pages/modules/modules.component';
+import { CourseInformationComponent } from './pages/dashboard/sub-pages/modules/course-information/course-information.component';
 
 export const routes: Routes = [
     {
@@ -62,7 +63,11 @@ export const routes: Routes = [
             },
             {
                 path: 'modules',
-                component: ModulesComponent 
+                component: ModulesComponent,
+            },
+            {
+                path: 'modules/:courseName',
+                component: CourseInformationComponent,
             },
             {
               path: 'my-courses',
