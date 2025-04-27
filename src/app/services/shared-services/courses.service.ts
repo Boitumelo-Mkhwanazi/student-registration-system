@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { sign } from 'crypto';
 
 type faculty = 'Health Science' | 'Science' | 'Engineering';
 
@@ -40,7 +41,7 @@ export class CourseService {
         "This course introduces you to the complete web development process from start to finish. You'll begin with HTML, CSS, and JavaScript to build responsive front-end interfaces, then move into back-end development using Node.js and Express. You'll work with databases like MongoDB and PostgreSQL, learning how to create RESTful APIs and integrate them into your web apps. Throughout the course, you’ll apply version control with Git, host projects on platforms like GitHub, and deploy your apps to the web. By the end, you'll be able to build dynamic, full-stack web applications from scratch.",
       instructorId: 'Karabo Morake',
       faculty: 'Science',
-      studentsCount: 95,
+      studentsCount: 8,
       rating: 4.6,
       fee: 270.0,
     },
@@ -66,7 +67,7 @@ export class CourseService {
         "This course provides a solid foundation in mechanical engineering principles including statics, dynamics, thermodynamics, and fluid mechanics. You'll learn to analyze the behavior of physical systems, design mechanical components, and apply simulation software for engineering analysis. Real-world case studies and design challenges will help you explore the mechanics of machines, materials, and structures. By the end of the course, you'll be prepared to solve engineering problems with analytical and practical skills that are essential in modern mechanical industries.",
       instructorId: 'Leah Zwane',
       faculty: 'Engineering',
-      studentsCount: 85,
+      studentsCount: 12,
       rating: 4.5,
       fee: 250.0,
     },
@@ -118,7 +119,7 @@ export class CourseService {
         "Gain in-depth knowledge of pharmacology, including drug classifications, mechanisms of action, and therapeutic uses. This course covers how drugs interact with the human body, side effects, dosing, and drug development. You'll also study pharmacokinetics and pharmacodynamics to understand how drugs are absorbed, metabolized, and eliminated. Real-world examples and clinical scenarios help you apply concepts to patient care. This course is ideal for anyone pursuing careers in healthcare, pharmacy, or clinical research.",
       instructorId: 'Micheal Adams',
       faculty: 'Health Science',
-      studentsCount: 85,
+      studentsCount: 234,
       rating: 4.8,
       fee: 240.0,
     },
@@ -136,4 +137,21 @@ export class CourseService {
       fee: 290.0,
     },
   ];
+
+  filteredCourses(selectedcourse: string) {
+    if (selectedcourse === 'All') {
+      return this.courses;
+    }
+    return this.courses.filter((course) => course.faculty === selectedcourse);
+  }
+
+  sortByPopularity(popularityStatus: string) {
+    if (popularityStatus === 'Most Popular') {
+      return this.courses.filter((course) => course.studentsCount >= 100);
+    } else if(popularityStatus === "Least Popular") {
+      return this.courses.filter((course) => course.studentsCount < 30)
+    }
+
+    return this.courses;
+  }
 }
