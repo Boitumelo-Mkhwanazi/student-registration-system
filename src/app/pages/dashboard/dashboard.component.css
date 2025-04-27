@@ -185,9 +185,6 @@ p, span, ion-icon {
 
 .container main footer {
     background-color: var(--navy-blue);
-    position: sticky;
-    bottom: 0;
-    right: 0;
     text-align: center;
     color: var(--white);
     padding: 1rem;

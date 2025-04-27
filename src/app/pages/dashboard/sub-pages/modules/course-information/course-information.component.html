@@ -1,1 +1,142 @@
-<p>course-information works!</p>
+<section id="hero">
+    <div class="inner-hero">
+        <div class="hero-text">
+            <div class="description">
+                <p>Courses > <span>{{ selectedCourse().title }}</span></p>
+                <h2>{{ selectedCourse().title }}</h2>
+                <p>
+                    {{ selectedCourse().description }}
+                </p>
+            </div>
+            <div class="buttons-container">
+                <a href="/sign-up" class="btn">Enroll</a>
+                <div class="reviews">
+                    <span>{{ selectedCourse().rating }}</span>
+                    <div class="stars">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                </div>
+                <p>{{ selectedCourse().studentsCount }} students </p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img [src]="selectedCourse().image" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="main">
+    <div class="course-details-1">
+        <div class="course-description">
+            <h3>What You'll Learn</h3>
+            <p [class.show-all]="showingMore()">{{ selectedCourse().detailed_description }}</p>
+            <div class="show-more">
+                @if (!showingMore()) {
+                    <span>Show more</span>
+                } @else {
+                    <span>Show less</span>
+                }
+                <div class="arrow-button" (click)="onShowMore()">
+                    <ion-icon name="chevron-down-outline" [class.rotate]="showingMore()"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div class="course-instructor">
+            <h3>Instructor</h3>
+            <div class="instructor-container">
+                <div class="instructor-image-container">
+                    <img src="team-member.png" alt="">
+                </div>
+                <div class="instructor-information">
+                    <div class="header">
+                        <h3>{{ selectedCourse().instructorId }}</h3>
+                        <p>Advanced Educator</p>
+                    </div>
+                    <div class="mid">
+                        <div class="mid-1">
+                            <ion-icon name="star"></ion-icon>
+                            <p class="review">75,235 reviews</p>
+                        </div>
+                        <p class="rating">4.4 rating</p>
+                        <div class="mid-2">
+                            <div class="icon-container">
+                                <ion-icon name="videocam-outline"></ion-icon>
+                            </div>
+                            <p>20 Courses</p>
+                        </div>
+                    </div>
+                    <p>John Is A Brilliant Educator, Who Life Was Spent For Computer Science And Love Of Nature</p>
+                    <div class="social-media-icons">
+                        <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-courses">
+            <div class="header">
+                <h3>More Courses by {{ selectedCourse().instructorId }}</h3>
+                <a href="">View All Courses</a>
+            </div>
+            <div class="cards">
+                <app-course [courseData]="coursesArray[0]" [activePage]="'Courses Page'"/>
+                <app-course [courseData]="coursesArray[1]" [activePage]="'Courses Page'"/>
+            </div>
+        </div>
+    </div>
+    <div class="course-details-2"> 
+        <div class="mid-container">
+            <h3>R{{ selectedCourse().fee }} <span>R150.00</span></h3>
+            <div class="enroll-text">
+                <a href="" class="btn">Enroll</a>
+                <p>Get the best learning experience</p>
+            </div>
+            <div class="information">
+                <div class="line">
+                    <p class="left">Course pace</p>
+                    <div class="right-container">
+                        <p class="right">Self Paced</p>
+                    </div>
+                </div>
+                <div class="line">
+                    <p class="left">Enrolled</p>
+                    <div class="right-container">
+                        <p class="right">{{ selectedCourse().studentsCount }}</p>
+                    </div>
+                </div>
+                <div class="line">
+                    <p class="left">Lecturer</p>
+                    <div class="right-container">
+                        <p class="right">1</p>
+                    </div>
+                </div>
+                <div class="line">
+                    <p class="left">Skill Level</p>
+                    <div class="right-container">
+                        <p class="right">Basic</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="course-details-footer">
+            <div class="social-media-icons">
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+            </div>
+            <div class="lecturer-information">
+                <p>For Details About The Course</p>
+                <a href="">
+                    <ion-icon name="call"></ion-icon>
+                    <p>Contact Us: +27840484407</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
