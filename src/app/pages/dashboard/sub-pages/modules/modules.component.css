@@ -1,0 +1,56 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 3rem;
+}
+
+.main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .header .text {
+    width: 38%;
+}
+
+.main .header .text h2,
+.main .container h2 {
+    font-weight: 500;
+}
+
+.main .header .text p {
+    color: #5f5f5f;
+    font-size: 0.85rem;
+}
+
+.main .container .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .container .filter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main .container .filter button,
+.main .container .filter select {
+    border-radius: 5px;
+    padding: 0.65rem 1.3rem;
+}
+
+.main .container .filter button {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.main .container .courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0rem;
+    padding: 1rem 0rem;
+}

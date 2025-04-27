@@ -1,1 +1,51 @@
-<p>modules works!</p>
+<div class="main">
+    <div class="header">
+        <div class="text">
+            <h2>Courses</h2>
+            <p>Choose from a vast selection of courses on the latest 
+                in-demand skil to achieve your goals.
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h2>Most Popular Picks</h2>
+            <div class="filter">
+                <select name="filter" id="filter">
+                    <option value="Most Popular">Most Popular</option>
+                    <option value="Least Popular">Least Popular</option>
+                </select>
+                <button>Apply</button>
+            </div>
+        </div>
+        
+        <div class="courses">
+            <app-course [courseData]="coursesArray[0]" />
+            <app-course [courseData]="coursesArray[1]" />
+            <app-course [courseData]="coursesArray[2]" />
+            <app-course [courseData]="coursesArray[3]" />
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h2>All Courses</h2>
+            <div class="filter">
+                <span>Show: </span>
+                <select name="filter" id="filter">
+                    <option value="All">All Courses</option>
+                    <option value="Health Science">Health Science Courses</option>
+                    <option value="Health Science">Science Courses</option>
+                    <option value="Health Science">Engineering Courses</option>
+                </select>
+                <button>Apply</button>
+            </div>
+        </div>
+        
+        <div class="courses">
+            @for(course of coursesArray; track course.id) {
+                <app-course [courseData]="course"/>
+            }
+        </div>
+    </div>
+    
+</div>
