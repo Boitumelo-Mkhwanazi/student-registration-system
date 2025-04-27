@@ -47,13 +47,71 @@
                     <div class="control">
                         <label for="gender">Gender</label>
                         <select name="category" id="gender">
+                            <option value="null">Rather not say</option>
                             <option value="female">Female</option>
                             <option value="male">Male</option>
                         </select>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="control">
+                        <label for="name">Date Of Birth</label>
+                        <input type="date">
+                    </div>
+                    <div class="control">
+                        
+                    </div>
+                </div>
             </div>
         </div>
-        <div></div>
+        <div class="personal-information">
+            <div class="top">
+                <ion-icon name="location-outline"></ion-icon>
+                <span>Address</span>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="control">
+                        <label for="full-address">Full Address</label>
+                        <input type="text" name="full-address" id="full-address" placeholder="Sekame Street, Mmabatho, South Africa">
+                    </div>
+                    <div class="control">
+                        <label for="street-name">Street name</label>
+                        <input type="text" name="street-name" id="street-name" placeholder="Sekame Street">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="control">
+                        <label for="email">City</label>
+                        <input type="text" name="city" id="email" placeholder="Mahikeng">
+                    </div>
+                    <div class="control">
+                        <label for="province">Province</label>
+                        <select name="province" id="province">
+                            <option value="null">Select Province</option>
+                            <option value="eastern_cape">Eastern Cape</option>
+                            <option value="free_state">Free State</option>
+                            <option value="gauteng">Gauteng</option>
+                            <option value="kwazulu_natal">KwaZulu-Natal</option>
+                            <option value="limpopo">Limpopo</option>
+                            <option value="mpumalanga">Mpumalanga</option>
+                            <option value="northern_cape">Northern Cape</option>
+                            <option value="north_west">North West</option>
+                            <option value="western_cape">Western Cape</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="control">
+                        <label for="postal-code">Postal Code</label>
+                        <input type="text" name="postal-code" id="postal-code" placeholder="Sekame Street, Mmabatho, South Africa">
+                    </div>
+                    <div class="control">
+                        <label for="country">Country</label>
+                        <input type="text" name="country" id="country" placeholder="South Africa">
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
 </div>
