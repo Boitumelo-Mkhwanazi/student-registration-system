@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { sign } from 'crypto';
 
 type faculty = 'Health Science' | 'Science' | 'Engineering';
 

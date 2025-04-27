@@ -1,6 +1,5 @@
 import { Component, computed, CUSTOM_ELEMENTS_SCHEMA, inject, input, signal } from '@angular/core';
 import { CourseService } from '../../../../../services/shared-services/courses.service';
-import { CourseDetailsComponent } from "../../../../../shared-ui/courses/course-details/course-details.component";
 import { CourseComponent } from '../../../../../shared-ui/courses/course/course.component';
 
 @Component({
