@@ -1,0 +1,110 @@
+<section>
+    <div class="col-1">
+        <div class="card">
+            <img src="courses/data_science.avif" alt="">
+            <div class="information">
+                <h3>Data Science</h3>
+                <div class="school">
+                    <div class="name">
+                        <h4>AWS</h4>
+                        <p>Tel: 0840484407</p>
+                    </div>
+                    <ion-icon name="logo-amazon"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-2">
+        <div class="main">
+            <div class="checkmark"><ion-icon name="checkmark-outline"></ion-icon></div>
+            <p class="confirm">Please confirm your enrollment into this course</p>
+            <div class="container-1">
+                <div class="item">
+                    <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                    <p>Enrich your mind</p>
+                </div>
+                <div class="item">
+                    <ion-icon name="alarm-outline"></ion-icon>
+                    <p>Self paced course</p>
+                </div>
+            </div>
+            <div class="accordions-container">
+                <div class="accordion">
+                    <div class="header" (click)="toggleFirstAccordion()">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                        <p>Course details</p>
+                    </div>
+                    <div class="content" [class.open]="accordionFirstOne()">
+                        <div class="item">
+                            <div class="left">
+                                <ion-icon name="home-outline" [class.down]="accordionFirstOne()"></ion-icon>
+                                <span>School</span>
+                            </div>
+                            <p>North-West University</p>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <ion-icon name="aperture-outline"></ion-icon>
+                                <span>Level</span>
+                            </div>
+                            <p>Basic</p>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <ion-icon name="man-outline"></ion-icon>
+                                <span>Lecturer</span>
+                            </div>
+                            <p>1 lecturer</p>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <ion-icon name="person-outline"></ion-icon>
+                                <span>Students</span>
+                            </div>
+                            <p>100 Students</p>
+                        </div>
+                        <div class="footer">
+                            <div class="left">
+                                <img src="team-member.png" alt="">
+                                <p>Jubeo Hernandez</p>
+                            </div>
+                            <div class="right">
+                                <ion-icon name="person-outline"></ion-icon>
+                                <p>Email</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="header" (click)="toggleSecondAccordion()">
+                        <ion-icon name="chevron-forward-outline" [class.down]="accordionTwoOpen()"></ion-icon>
+                        <p>Your details</p>
+                    </div>
+                    <div class="content" [class.open]="accordionTwoOpen()">
+                        <div class="item">
+                            <div class="left">
+                                <ion-icon name="home-outline"></ion-icon>
+                                <span>Full Name</span>
+                            </div>
+                            <p>Boitumelo Mkhwanazi</p>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <ion-icon name="aperture-outline"></ion-icon>
+                                <span>Email</span>
+                            </div>
+                            <p>b_mkwanazi&#64;cloud.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <p>Ready to enroll?</p>
+                <div class="right">
+                    <button class="btn">Go back</button>
+                    <button class="btn">Enroll now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -16,6 +16,7 @@ import { AssessmentsComponent } from './pages/dashboard/sub-pages/assessments/as
 import { DepositComponent } from './pages/dashboard/sub-pages/deposit/deposit.component';
 import { ModulesComponent } from './pages/dashboard/sub-pages/modules/modules.component';
 import { CourseInformationComponent } from './pages/dashboard/sub-pages/modules/course-information/course-information.component';
+import { ConfirmationComponent } from './pages/courses/confirmation/confirmation.component';
 
 export const routes: Routes = [
     {
@@ -37,6 +38,10 @@ export const routes: Routes = [
     {
         path: 'courses/:courseName',
         component: CourseDetailsComponent
+    },
+    {
+        path: 'courses/:courseName/confirmation',
+        component: ConfirmationComponent
     },
     {
         path: 'contact',
