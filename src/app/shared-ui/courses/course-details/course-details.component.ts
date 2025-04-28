@@ -4,10 +4,11 @@ import { CourseService } from '../../../services/shared-services/courses.service
 import { CourseComponent } from "../course/course.component";
 import { NewsletterComponent } from "../../newsletter/newsletter.component";
 import { FooterComponent } from "../../footer/footer.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-course-details',
-  imports: [NavbarComponent, CourseComponent, NewsletterComponent, FooterComponent],
+  imports: [NavbarComponent, CourseComponent, NewsletterComponent, FooterComponent, RouterLink],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './course-details.component.html',
   styleUrl: './course-details.component.css'

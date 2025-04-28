@@ -1,10 +1,11 @@
 import { Component, computed, CUSTOM_ELEMENTS_SCHEMA, inject, input, signal } from '@angular/core';
 import { CourseService } from '../../../../../services/shared-services/courses.service';
 import { CourseComponent } from '../../../../../shared-ui/courses/course/course.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-course-information',
-  imports: [CourseComponent],
+  imports: [CourseComponent, RouterLink],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './course-information.component.html',
   styleUrl: './course-information.component.css'

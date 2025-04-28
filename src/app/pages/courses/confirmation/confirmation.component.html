@@ -31,13 +31,13 @@
             <div class="accordions-container">
                 <div class="accordion">
                     <div class="header" (click)="toggleFirstAccordion()">
-                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                        <ion-icon name="chevron-forward-outline" [class.down]="accordionFirstOne()"></ion-icon>
                         <p>Course details</p>
                     </div>
                     <div class="content" [class.open]="accordionFirstOne()">
                         <div class="item">
                             <div class="left">
-                                <ion-icon name="home-outline" [class.down]="accordionFirstOne()"></ion-icon>
+                                <ion-icon name="home-outline"></ion-icon>
                                 <span>School</span>
                             </div>
                             <p>North-West University</p>
@@ -83,14 +83,14 @@
                     <div class="content" [class.open]="accordionTwoOpen()">
                         <div class="item">
                             <div class="left">
-                                <ion-icon name="home-outline"></ion-icon>
+                                <ion-icon name="pencil-outline"></ion-icon>
                                 <span>Full Name</span>
                             </div>
                             <p>Boitumelo Mkhwanazi</p>
                         </div>
                         <div class="item">
                             <div class="left">
-                                <ion-icon name="aperture-outline"></ion-icon>
+                                <ion-icon name="mail-outline"></ion-icon>
                                 <span>Email</span>
                             </div>
                             <p>b_mkwanazi&#64;cloud.com</p>

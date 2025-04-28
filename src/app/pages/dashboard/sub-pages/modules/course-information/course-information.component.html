@@ -93,7 +93,7 @@
         <div class="mid-container">
             <h3>R{{ selectedCourse().fee }} <span>R150.00</span></h3>
             <div class="enroll-text">
-                <a href="" class="btn">Enroll</a>
+                <a [routerLink]="['/courses', selectedCourse().title, 'confirmation']" class="btn">Enroll</a>
                 <p>Get the best learning experience</p>
             </div>
             <div class="information">
