@@ -1,1 +1,26 @@
-<p>my-courses works!</p>
+<div class="main">
+    <div class="header">
+        <div class="text">
+            <h2>My Courses</h2>
+            <p>See all the courses you've enrolled for</p>
+        </div>
+    </div>
+    <div class="container">
+        @if (userCourses.length !== 0) {
+            <div class="courses">
+                @for(course of userCourses; track course.id) {
+                    <app-course [courseData]="course" [activePage]="'Dashboard Page'"/>
+                }
+            </div>
+        } @else {
+            <div class="error-container">
+                <div class="error-icon">
+                    <ion-icon name="alert-outline"></ion-icon>
+                </div>
+                <h3>Ooops! You have no registered courses</h3>
+                <p>Ready to register? Check out our courses</p>
+                <a [routerLink]="['modules']" class="btn">All Courses</a>
+            </div>
+        }
+    </div>
+</div>

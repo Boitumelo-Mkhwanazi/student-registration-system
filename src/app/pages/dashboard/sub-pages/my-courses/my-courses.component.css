@@ -1,0 +1,67 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 3rem;
+}
+
+.main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .header .text {
+    width: 38%;
+}
+
+.main .header .text h2,
+.main .container h2 {
+    font-weight: 500;
+}
+
+.main .header .text p {
+    color: #5f5f5f;
+    font-size: 0.85rem;
+}
+
+.main .container .courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0rem;
+    padding: 1rem 0rem;
+}
+
+.main .container .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.main .container .error-container .error-icon {
+    background-color: var(--sky-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+}
+
+.main .container .error-container .error-icon ion-icon {
+    font-size: 2.5rem;
+}
+
+.main .container .error-container h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    width: 40%;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.main .container .error-container p {
+    color: #5f5f5f;
+}

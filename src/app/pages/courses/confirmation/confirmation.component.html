@@ -1,9 +1,9 @@
 <section>
     <div class="col-1">
         <div class="card">
-            <img src="courses/data_science.avif" alt="">
+            <img [src]="selectedCourse().image" alt="">
             <div class="information">
-                <h3>Data Science</h3>
+                <h3>{{ selectedCourse().title }}</h3>
                 <div class="school">
                     <div class="name">
                         <h4>AWS</h4>
@@ -45,9 +45,9 @@
                         <div class="item">
                             <div class="left">
                                 <ion-icon name="aperture-outline"></ion-icon>
-                                <span>Level</span>
+                                <span>Fcaulty</span>
                             </div>
-                            <p>Basic</p>
+                            <p>{{ selectedCourse().faculty }}</p>
                         </div>
                         <div class="item">
                             <div class="left">
@@ -61,7 +61,7 @@
                                 <ion-icon name="person-outline"></ion-icon>
                                 <span>Students</span>
                             </div>
-                            <p>100 Students</p>
+                            <p>{{ selectedCourse().studentsCount }} Students</p>
                         </div>
                         <div class="footer">
                             <div class="left">
@@ -102,7 +102,7 @@
                 <p>Ready to enroll?</p>
                 <div class="right">
                     <button class="btn">Go back</button>
-                    <button class="btn">Enroll now</button>
+                    <button class="btn" (click)="addNewCourse()">Enroll now</button>
                 </div>
             </div>
         </div>
