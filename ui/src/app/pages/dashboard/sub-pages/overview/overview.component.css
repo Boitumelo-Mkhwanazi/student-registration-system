@@ -70,6 +70,14 @@ img {
     font-size: 1.25rem;
 }
 
+.main .content .main-container .announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 12rem;
+    overflow-y: scroll;
+}
+
 .main .content .main-container .announcement {
     background-color: var(--navy-blue);
     border-radius: 10px;
@@ -80,40 +88,42 @@ img {
     gap: 0.5rem;
 }
 
-.main .content .main-container .announcement:nth-child(3) {
-    background-color: #f5f5f5;
+.main .content .main-container .announcements .announcement:nth-child(2) {
+    background-color: #e4e4e4;
     color: var(--navy-blue);
 }
 
-.main .content .main-container .announcement:nth-child(3) .top p, 
-.main .content .main-container .announcement:nth-child(3) .top span,
-.main .content .main-container .announcement:nth-child(3) .message p{
-    color: var(--navy-blue);
-}
-
-.main .content .main-container .announcement .top .header-text {
+.main .content .main-container .announcements .announcement .top .header-text {
     font-weight: 600;
 }
 
-.main .content .main-container .announcement .top {
+.main .content .main-container .announcements .announcement .top {
     display: flex;
     justify-content: space-between;
 }
 
-.main .content .main-container .announcement .message {
+.main .content .main-container .announcements .announcement .message {
     width: 90%;
 }
 
-.main .content .main-container .announcement .top p,
-.main .content .main-container .announcement .top span,
-.main .content .main-container .announcement .message p  {
+.main .content .main-container .announcements .announcement .top p,
+.main .content .main-container .announcements .announcement .top span,
+.main .content .main-container .announcements .announcement .message p  {
     color: var(--white);
+}
+
+.main .content .main-container .announcements .announcement:nth-child(2) .top p,
+.main .content .main-container .announcements .announcement:nth-child(2) .top span,
+.main .content .main-container .announcements .announcement:nth-child(2) .message p  {
+    color: var(--navy-blue);
 }
 
 .main .content .main-container .view-all {
     display: flex;
     align-items: center;
     gap: 1rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .main .content .main-container .view-all .icon-container {
