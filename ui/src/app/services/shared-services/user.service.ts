@@ -18,6 +18,7 @@ export interface courseType {
 @Injectable({ providedIn: 'root' })
 export class userService {
     courses: courseType[] = [
+      
     ]
 
     addNewCourse(newCourse: courseType) {

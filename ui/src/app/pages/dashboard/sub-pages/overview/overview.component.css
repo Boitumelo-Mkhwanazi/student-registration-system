@@ -189,3 +189,46 @@ img {
 .main .content .side .container .btn {
     text-align: center;
 }
+
+/* COURSES */
+.main .courses-container h2 {
+    font-weight: 500;
+}
+.main .courses-container .courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.main .courses-container .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.main .courses-container .error-container .error-icon {
+    background-color: var(--sky-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+}
+
+.main .courses-container .error-container .error-icon ion-icon {
+    font-size: 2.5rem;
+}
+
+.main .courses-container .error-container h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    width: 40%;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.main .courses-container .error-container p {
+    color: #5f5f5f;
+}

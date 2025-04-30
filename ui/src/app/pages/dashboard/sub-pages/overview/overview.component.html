@@ -72,7 +72,24 @@
             </div>
         </div>
     </div>
-    <div class="courses">
-
+    <div class="courses-container">
+        <h2>Your Courses</h2>
+        @if (userCourses.length !== 0) {
+            <div class="courses">
+                @for (course of userCourses; track course.id) {
+                    <app-course [courseData]="course" [activePage]="''"/>
+                }
+            </div>
+        } @else {
+            <div class="error-container">
+                <div class="error-icon">
+                    <ion-icon name="alert-outline"></ion-icon>
+                </div>
+                <h3>Ooops! You have no registered courses</h3>
+                <p>Ready to register? Check out our courses</p>
+                <a [routerLink]="['modules']" class="btn">All Courses</a>
+            </div>
+        }
+        
     </div>
 </div>
