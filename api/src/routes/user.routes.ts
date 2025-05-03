@@ -4,7 +4,7 @@ import {
   sendInternalServerError,
   sendOk,
 } from "../utils/http.util";
-import * as UserService from "../services/user.services";
+import * as UserService from "../services/user.service";
 import { User } from "../models/user.interface";
 import { getErrorMessage } from "../utils/errors.utils";
 
