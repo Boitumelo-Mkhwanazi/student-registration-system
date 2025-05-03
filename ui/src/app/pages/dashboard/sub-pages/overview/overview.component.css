@@ -232,3 +232,43 @@ img {
 .main .courses-container .error-container p {
     color: #5f5f5f;
 }
+
+/* MEDIA QUERY */
+@media (max-width: 767px) {
+    .main {
+        padding: 5rem 1rem 0rem 1rem;
+        gap: 1rem;
+    }
+
+    .main .header h2 {
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+
+    .main .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .main .hero .image1 {
+        height: 18rem;
+    }
+    
+    .main .hero .second {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
+    }
+    
+    .main .hero .second img:nth-child(2),
+    .main .hero .second img:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .main .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
