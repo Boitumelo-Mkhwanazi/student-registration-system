@@ -1,4 +1,6 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { DestroyRef, inject, Injectable } from '@angular/core';
+import { map } from 'rxjs';
 
 type faculty = 'Health Science' | 'Science' | 'Engineering';
 
@@ -17,6 +19,25 @@ export interface courseType {
 
 @Injectable({ providedIn: 'root' })
 export class CourseService {
+  private destroyRef = inject(DestroyRef);
+  private httpClient = inject(HttpClient);
+
+  constructor() {
+    const subscription = this.httpClient.get("http://localhost:3000/api/module")
+    .subscribe({
+      next: (responseData) => {
+        console.log(responseData)
+      },
+      error: (error) => {
+        console.log(error)
+      }
+    })
+
+    this.destroyRef.onDestroy(() => {
+      subscription.unsubscribe();
+    })
+  }
+
   courses: courseType[] = [
     {
       id: 'SCI101',

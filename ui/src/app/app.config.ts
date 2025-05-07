@@ -3,9 +3,10 @@ import { provideRouter, withComponentInputBinding, withRouterConfig } from '@ang
 
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes, withComponentInputBinding(), withRouterConfig({
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideHttpClient() , provideRouter(routes, withComponentInputBinding(), withRouterConfig({
     paramsInheritanceStrategy: 'always',
   })), provideClientHydration(withEventReplay())]
 };
