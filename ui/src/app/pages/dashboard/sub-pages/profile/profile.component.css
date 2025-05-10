@@ -142,3 +142,38 @@
     outline: none;
     border: 1px solid var(--navy-blue);
 }
+
+@media (max-width: 767px) {
+    .main {
+        gap: 2rem;
+        padding: 5rem 1rem;
+    }
+
+    .main form {
+        gap: 2rem;
+    }
+
+    .main form .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0 0;
+    }
+
+    .main form .header .buttons {
+        align-items: stretch;
+    }
+
+    .main form .header .buttons button:first-child ion-icon {
+        font-size: 2rem;
+    }
+
+    .main form .profile-picture .container img {
+        width: 25%;
+        border-radius: 50%;
+    }
+
+    .main form .personal-information .container .row {
+        gap: 0.5rem;
+    }
+}
