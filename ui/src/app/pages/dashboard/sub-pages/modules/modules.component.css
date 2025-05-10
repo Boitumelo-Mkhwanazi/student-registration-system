@@ -54,3 +54,27 @@
     gap: 0rem;
     padding: 1rem 0rem;
 }
+
+@media (max-width: 767px) {
+    .main {
+        gap: 1rem;
+        padding: 5rem 1rem;
+    }
+
+    .main .header .text {
+        width: 85%;
+    } 
+
+    .main .container .header h2 {
+        line-height: 1.75rem;
+    }
+
+    .main .container .courses {
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem 0rem;
+    }
+
+    .main .container .header .filter span {
+        display: none;
+    }
+}

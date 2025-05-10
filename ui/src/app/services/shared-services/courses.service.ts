@@ -26,7 +26,7 @@ export class CourseService {
     const subscription = this.httpClient.get("http://localhost:3000/api/module")
     .subscribe({
       next: (responseData) => {
-        console.log(responseData)
+        //console.log(responseData)
       },
       error: (error) => {
         console.log(error)

@@ -194,6 +194,7 @@ img {
 .main .courses-container h2 {
     font-weight: 500;
 }
+
 .main .courses-container .courses {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -270,5 +271,39 @@ img {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .main .courses-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main .courses-container h2 {
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+    
+    .main .courses-container .courses {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .main .courses-container .error-container {
+        padding: 0rem 0rem 1rem 0rem;
+    }
+
+    .main .courses-container .error-container .error-icon {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .main .courses-container .error-container .error-icon ion-icon {
+        font-size: 1.5rem;
+    }
+
+    .main .courses-container .error-container h3 {
+        font-weight: 500;
+        font-size: 1.25rem;
+        width: 80%;
     }
 }
