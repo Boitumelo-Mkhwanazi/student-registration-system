@@ -18,7 +18,7 @@
                 <a [href]="selectedMember().gitHub">GitHub</a>
                 <a [href]="selectedMember().linkedIn">LinkedIn</a>
             </div>
-            <div class="close"><ion-icon name="close-outline"></ion-icon></div>
+            <a [routerLink]="['/about']" class="close"><ion-icon name="close-outline"></ion-icon></a>
         </div>
     </dialog>
 </div>

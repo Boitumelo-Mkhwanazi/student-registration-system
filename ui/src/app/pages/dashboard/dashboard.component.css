@@ -204,6 +204,20 @@ p, span, ion-icon {
     .container {
         grid-template-columns: 1fr;
     }
+
+    .backdrop {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100vh;
+        z-index: 1000;
+    }
+
+    .backdrop.open {
+        width: 100%;
+    }
     
     .container aside {
         position: fixed;
@@ -211,6 +225,11 @@ p, span, ion-icon {
         left: -19rem;
         gap: 2rem;
         z-index: 1000;
+        transition: all 0.3s ease-in;
+    }
+
+    .container aside.open {
+        left: 0rem;
     }
     
     .container main .header .menu {
