@@ -1,13 +1,16 @@
 import { Request, Response, Router } from "express";
 import { ModuleQueryParameters } from "../models/module.interface";
-import { getAllModules, getModuleById } from "../services/module.service";
+import {
+  getAllModules,
+  getFaculties,
+  getModuleById,
+} from "../services/module.service";
 import {
   sendBadRequest,
   sendInternalServerError,
   sendOk,
 } from "../utils/http.util";
 import { getErrorMessage } from "../utils/errors.utils";
-
 
 export const moduleRouter = Router();
 
@@ -39,6 +42,16 @@ moduleRouter.get("/:id", async (req: Request, res: Response) => {
     if (!result) {
       sendBadRequest(res, "Module not found");
     }
+
+    sendOk(res, result);
+  } catch (error) {
+    sendInternalServerError(res, getErrorMessage(error));
+  }
+});
+
+moduleRouter.get("/all/faculty", async (req: Request, res: Response) => {
+  try {
+    const result = await getFaculties();
 
     sendOk(res, result);
   } catch (error) {
