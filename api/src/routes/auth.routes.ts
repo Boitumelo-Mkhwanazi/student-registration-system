@@ -60,7 +60,7 @@ authRouter.post("/login", async (req: Request, res: Response) => {
     if (!isMatching) {
       sendUnauthorized(res, "Passwords do not match");
     }
-    
+
     const token = jwt.sign(
       {
         id: user.id,
@@ -68,7 +68,7 @@ authRouter.post("/login", async (req: Request, res: Response) => {
         // e.g firstname: user.firstname
       },
       secretKey,
-      { expiresIn: "9h" , algorithm: "HS256" },
+      { expiresIn: "9h", algorithm: "HS256" },
     );
   } catch (error) {
     sendInternalServerError(res, getErrorMessage(error));
