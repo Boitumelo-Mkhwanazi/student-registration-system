@@ -36,3 +36,7 @@ export const upsertUser = async (user: User) => {
 export const getUserById = async (id: number) => {
   return await query("SELECT * FROM user WHERE id = ?", [id]);
 };
+
+export const getUserByEmail = async (email: string) => {
+  return await query("SELECT * FROM user WHERE email ?", [email])
+}
