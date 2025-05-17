@@ -350,3 +350,11 @@ INSERT INTO registration (student_id, module_id, registration_date, score_mark, 
 (27, 10, '2024-05-25', 68, 68.00),
 (28, 12, '2024-02-14', 74, 74.00),
 (28, 1,  '2024-01-19', 81, 81.00);
+
+-- Adding province field
+ALTER TABLE user
+ADD province VARCHAR(255) NOT NULL;
+
+-- Making province nullable
+ALTER TABLE user
+MODIFY COLUMN province VARCHAR(255) NULL;
