@@ -40,7 +40,7 @@ export class CourseService {
 
   courses: courseType[] = [
     {
-      id: 'SCI101',
+      id: '1',
       image: 'courses/data_science.avif',
       title: 'Data Science',
       description: 'Introduction to data science and machine learning.',
@@ -53,7 +53,7 @@ export class CourseService {
       fee: 150.0,
     },
     {
-      id: 'SCI102',
+      id: '2',
       image: 'courses/web_development.avif',
       title: 'Web Development',
       description: 'Learn full-stack web development with modern technologies.',
@@ -66,7 +66,7 @@ export class CourseService {
       fee: 270.0,
     },
     {
-      id: 'SCI103',
+      id: '3',
       image: 'courses/artificial_intelligence.avif',
       title: 'Artificial Intelligence',
       description: 'Fundamentals of AI, deep learning, and neural networks.',
@@ -79,7 +79,7 @@ export class CourseService {
       fee: 170.0,
     },
     {
-      id: 'ENG201',
+      id: '4',
       image: 'courses/mechanical_engineering.avif',
       title: 'Mechanical Engineering',
       description: 'Study of mechanical systems and design principles.',
@@ -92,7 +92,7 @@ export class CourseService {
       fee: 250.0,
     },
     {
-      id: 'ENG202',
+      id: '5',
       image: 'courses/electrical_engineering.avif',
       title: 'Electrical Engineering',
       description: 'Exploring electrical circuits, power systems, and electronics.',
@@ -105,7 +105,7 @@ export class CourseService {
       fee: 320.0,
     },
     {
-      id: 'ENG203',
+      id: '6',
       image: 'courses/civil_engineering.avif',
       title: 'Civil Engineering',
       description: 'Infrastructure design, construction, and urban planning.',
@@ -118,7 +118,7 @@ export class CourseService {
       fee: 190.0,
     },
     {
-      id: 'HLT301',
+      id: '7',
       image: 'courses/medicine.avif',
       title: 'Medicine',
       description: "Study of the human body's structure and function.",
@@ -131,7 +131,7 @@ export class CourseService {
       fee: 350.0,
     },
     {
-      id: 'HLT302',
+      id: '8',
       image: 'courses/pharmacology.avif',
       title: 'Pharmacology',
       description: 'Understanding drugs and their effects on the human body.',
@@ -144,7 +144,7 @@ export class CourseService {
       fee: 240.0,
     },
     {
-      id: 'HLT303',
+      id: '9',
       image: 'courses/bacteria.avif',
       title: 'Public Health',
       description: 'Examining healthcare policies and disease prevention.',
