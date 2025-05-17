@@ -28,7 +28,12 @@ export const getAllModules = async (queryParams: ModuleQueryParameters) => {
 
   `;
 
-  const modules = await query(sql, [searchQuery, searchQuery, per_page, offset]);
+  const modules = await query(sql, [
+    searchQuery,
+    searchQuery,
+    per_page,
+    offset,
+  ]);
   return modules;
 };
 
@@ -75,9 +80,9 @@ export const getModuleById = async (id: number) => {
 };
 
 // Get all faculties
-export const getFaculties = async() =>{
-  return await query('SELECT * FROM faculty');
-}
+export const getFaculties = async () => {
+  return await query("SELECT * FROM faculty");
+};
 
 // Get modules with more than 100 students
 export const getTopModules = async () => {};
