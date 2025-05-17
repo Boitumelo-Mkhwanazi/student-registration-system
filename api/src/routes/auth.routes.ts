@@ -32,7 +32,7 @@ authRouter.post("/signup", async (req: Request, res: Response) => {
       const result = await UserService.upsertUser(user);
 
       if (result) {
-        sendOk(res, result);
+        sendOk(res, user);
         return;
       }
     }
