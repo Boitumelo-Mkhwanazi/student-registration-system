@@ -1,9 +1,11 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import cors from "cors";
 import { pool, query } from "./utils/db.util";
 import dotenv from "dotenv";
 import { userRouter } from "./routes/user.routes";
+import {authRouter} from "./routes/auth.routes"
 import {moduleRouter} from "./routes/module.routes";
+import { registrationRouter } from "./routes/registration.routes";
 const app = express();
 
 const PORT = process.env.PORT;
@@ -16,6 +18,8 @@ app.use(cors());
 
 app.use('/api', userRouter);
 app.use('/api/module', moduleRouter);
+app.use('/api/auth', authRouter)
+app.use('/api/registration', registrationRouter)
 
 // Listener
 app.listen(PORT, async () => {

@@ -9,13 +9,14 @@ export interface User {
   surname: string,
   email: string;
   password: string;
-  role: UserRole;
-  gender: string,
-  address: string,
-  city: string,
-  postal_code: string,
-  country: string,
-  dob: string,
+  role?: UserRole;
+  gender?: string,
+  address?: string,
+  city?: string,
+  postal_code?: string,
+  country?: string,
+  dob?: string,
+  province?: string;
 }
 
 export interface Student {

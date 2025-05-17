@@ -18,9 +18,8 @@ moduleRouter.get("/", async (req: Request, res: Response) => {
   try {
     const search = (req.query.search as string) || "";
     const page = parseInt(req.query.page as string) || 1;
-    const perPage = parseInt(req.query.perPage as string) || 10;
-
-    const params: ModuleQueryParameters = { search, page, perPage };
+    const per_page = parseInt(req.query.per_page as string) || 10;
+    const params: ModuleQueryParameters = { search, page, per_page };
 
     const modules = await getAllModules(params);
     sendOk(res, modules);

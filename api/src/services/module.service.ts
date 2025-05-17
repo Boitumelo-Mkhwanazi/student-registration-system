@@ -3,9 +3,9 @@ import { query } from "../utils/db.util";
 
 // Gets all modules based off the given query parameters
 export const getAllModules = async (queryParams: ModuleQueryParameters) => {
-  const { search, page, perPage } = queryParams;
+  const { search, page, per_page } = queryParams;
 
-  const offset = (page - 1) * perPage;
+  const offset = (page - 1) * per_page;
   const searchQuery = `%${search}%`;
 
   const sql = `
@@ -28,7 +28,12 @@ export const getAllModules = async (queryParams: ModuleQueryParameters) => {
 
   `;
 
-  const modules = await query(sql, [searchQuery, searchQuery, perPage, offset]);
+  const modules = await query(sql, [
+    searchQuery,
+    searchQuery,
+    per_page,
+    offset,
+  ]);
   return modules;
 };
 
@@ -75,9 +80,9 @@ export const getModuleById = async (id: number) => {
 };
 
 // Get all faculties
-export const getFaculties = async() =>{
-  return await query('SELECT * FROM faculty');
-}
+export const getFaculties = async () => {
+  return await query("SELECT * FROM faculty");
+};
 
 // Get modules with more than 100 students
 export const getTopModules = async () => {};

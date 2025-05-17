@@ -32,7 +32,7 @@ authRouter.post("/signup", async (req: Request, res: Response) => {
       const result = await UserService.upsertUser(user);
 
       if (result) {
-        sendOk(res, result);
+        sendOk(res, user);
         return;
       }
     }
@@ -56,10 +56,10 @@ authRouter.post("/login", async (req: Request, res: Response) => {
   }
 
   try {
-    const isMatching = await bcrypt.compare(logInInfo.password, user.password);
-    if (!isMatching) {
-      sendUnauthorized(res, "Passwords do not match");
-    }
+    // const isMatching = await bcrypt.compare(logInInfo.password, user.password);
+    // if (!isMatching) {
+    //   sendUnauthorized(res, "Passwords do not match");
+    // }
 
     const token = jwt.sign(
       {
@@ -70,6 +70,8 @@ authRouter.post("/login", async (req: Request, res: Response) => {
       secretKey,
       { expiresIn: "9h", algorithm: "HS256" },
     );
+
+    sendOk(res, token);
   } catch (error) {
     sendInternalServerError(res, getErrorMessage(error));
   }
