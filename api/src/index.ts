@@ -3,6 +3,7 @@ import cors from "cors";
 import { pool, query } from "./utils/db.util";
 import dotenv from "dotenv";
 import { userRouter } from "./routes/user.routes";
+import {authRouter} from "./routes/auth.routes"
 import {moduleRouter} from "./routes/module.routes";
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(cors());
 
 app.use('/api', userRouter);
 app.use('/api/module', moduleRouter);
+app.use('/api/auth', authRouter)
 
 // Listener
 app.listen(PORT, async () => {

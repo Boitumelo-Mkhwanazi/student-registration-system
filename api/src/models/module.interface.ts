@@ -15,5 +15,5 @@ export interface Module {
 export interface ModuleQueryParameters {
   search: string;
   page: number;
-  perPage: number;
+  per_page: number;
 }

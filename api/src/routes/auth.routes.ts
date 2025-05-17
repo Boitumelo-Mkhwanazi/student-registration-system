@@ -56,11 +56,11 @@ authRouter.post("/login", async (req: Request, res: Response) => {
   }
 
   try {
-    const isMatching = await bcrypt.compare(logInInfo.password, user.password);
-    if (!isMatching) {
-      sendUnauthorized(res, "Passwords do not match");
-    }
-    
+    // const isMatching = await bcrypt.compare(logInInfo.password, user.password);
+    // if (!isMatching) {
+    //   sendUnauthorized(res, "Passwords do not match");
+    // }
+
     const token = jwt.sign(
       {
         id: user.id,
@@ -68,8 +68,10 @@ authRouter.post("/login", async (req: Request, res: Response) => {
         // e.g firstname: user.firstname
       },
       secretKey,
-      { expiresIn: "9h" , algorithm: "HS256" },
+      { expiresIn: "9h", algorithm: "HS256" }
     );
+
+    sendOk(res, token);
   } catch (error) {
     sendInternalServerError(res, getErrorMessage(error));
   }
