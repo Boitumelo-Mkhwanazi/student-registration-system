@@ -39,7 +39,7 @@ export const routes: Routes = [
     // You can do this to other routes this is just an example
     // you can also right your own specific guards to only let
     // lectures access certain pages or only admins just check out Angular guards on how to do that
-    canAcitvate: [authGuard]
+    canActivate: [authGuard]
   },
   {
     path: 'courses/:courseName',
