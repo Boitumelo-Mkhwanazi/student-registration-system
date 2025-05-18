@@ -362,3 +362,7 @@ ADD province VARCHAR(255) NOT NULL;
 -- Making province nullable
 ALTER TABLE user
 MODIFY COLUMN province VARCHAR(255) NULL;
+
+-- Added column to store image url
+ALTER TABLE module
+ADD img_url VARCHAR(255) NULL;
