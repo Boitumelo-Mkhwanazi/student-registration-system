@@ -10,11 +10,12 @@ export const getAllModules = async (queryParams: ModuleQueryParameters) => {
 
   const sql = `
     SELECT 
-    m_filtered.id AS course_id,
-    f.name AS faculty_name,
-    m_filtered.name AS course_name,
-    COUNT(r.student_id) AS number_of_students,
-    ROUND(AVG(r.percentage), 2) AS average_percentage
+      m_filtered.id AS course_id,
+      f.name AS faculty_name,
+      m_filtered.name AS course_name,
+      m_filtered.img_url,
+      COUNT(r.student_id) AS number_of_students,
+      ROUND(AVG(r.percentage), 2) AS average_percentage
     FROM (
         SELECT *
         FROM student_registration.module
@@ -23,9 +24,8 @@ export const getAllModules = async (queryParams: ModuleQueryParameters) => {
     ) AS m_filtered
     JOIN student_registration.faculty f ON m_filtered.faculty_id = f.id
     LEFT JOIN student_registration.registration r ON m_filtered.id = r.module_id
-    GROUP BY f.name, m_filtered.id, m_filtered.name
+    GROUP BY f.name, m_filtered.id, m_filtered.name, m_filtered.img_url
     ORDER BY f.name, m_filtered.name;
-
   `;
 
   const modules = await query(sql, [
@@ -44,6 +44,7 @@ export const getModuleById = async (id: number) => {
     SELECT 
         m.id AS course_id,
         m.name AS course_name,
+        m.img_url,
         m.description,
         m.overview,
         m.fee AS course_price,
@@ -72,20 +73,9 @@ export const getModuleById = async (id: number) => {
     
     GROUP BY 
         m.id, f.name, u.name, u.surname,
-        m.name, m.description, m.overview,
+        m.name, m.img_url, m.description, m.overview,
         m.fee, m.level, m.prerequisite
     `,
     [id]
   );
 };
-
-// Get all faculties
-export const getFaculties = async () => {
-  return await query("SELECT * FROM faculty");
-};
-
-// Get modules with more than 100 students
-export const getTopModules = async () => {};
-
-// Get modules a student is registerd for
-export const getStudentModules = async () => {};
