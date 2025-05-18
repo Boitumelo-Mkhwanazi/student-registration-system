@@ -16,7 +16,7 @@
             }
         </div>
         <div class="courses-cards">
-            @for(course of coursesArray; track course.id) {
+            @for(course of coursesArray; track course.course_name) {
                 <app-course [courseData]="course" [activePage]="'Courses Page'"/>
             }
         </div>

@@ -19,7 +19,7 @@
         </div>
         
         <div class="courses">
-            @for(course of onSelectSortCategory(); track course.id) {
+            @for(course of onSelectSortCategory(); track course.course_id) {
                 <app-course [courseData]="course" [activePage]="'Dashboard Page'"/>
             }
         </div>
@@ -39,7 +39,7 @@
         </div>
         
         <div class="courses">
-            @for(course of onSelectCourseCategory(); track course.id) {
+            @for(course of onSelectCourseCategory(); track course.course_id) {
                 <app-course [courseData]="course" [activePage]="'Dashboard Page'"/>
             }
         </div>

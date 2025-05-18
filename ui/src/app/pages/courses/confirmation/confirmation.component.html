@@ -1,9 +1,9 @@
 <section>
     <div class="col-1">
         <div class="card">
-            <img [src]="selectedCourse().image" alt="">
+            <img [src]="module().img_url" alt="">
             <div class="information">
-                <h3>{{ selectedCourse().title }}</h3>
+                <h3>{{ module().course_name}}</h3>
                 <div class="school">
                     <div class="name">
                         <h4>AWS</h4>
@@ -47,7 +47,7 @@
                                 <ion-icon name="aperture-outline"></ion-icon>
                                 <span>Fcaulty</span>
                             </div>
-                            <p>{{ selectedCourse().faculty }}</p>
+                            <p>{{ module().faculty_name }}</p>
                         </div>
                         <div class="item">
                             <div class="left">
@@ -61,16 +61,21 @@
                                 <ion-icon name="person-outline"></ion-icon>
                                 <span>Students</span>
                             </div>
-                            <p>{{ selectedCourse().studentsCount }} Students</p>
+                            <p>{{ module().number_of_students }} Students</p>
                         </div>
                         <div class="footer">
                             <div class="left">
                                 <img src="team-member.png" alt="">
-                                <p>Jubeo Hernandez</p>
+                                <p>{{ module().instructor_name }}</p>
                             </div>
                             <div class="right">
                                 <ion-icon name="person-outline"></ion-icon>
-                                <p>Email</p>
+                                @if(module().total_courses_by_instructor > 1) {
+                                    <p>{{ module().total_courses_by_instructor }} Courses </p>
+                                } @else {
+                                    <p>{{ module().total_courses_by_instructor }} Course </p>
+                                }
+                                
                             </div>
                         </div>
                     </div>

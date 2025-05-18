@@ -4,7 +4,7 @@ import { CourseService } from '../../../services/shared-services/courses.service
 import { CourseComponent } from "../course/course.component";
 import { NewsletterComponent } from "../../newsletter/newsletter.component";
 import { FooterComponent } from "../../footer/footer.component";
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -15,21 +15,26 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './course-details.component.css'
 })
 export class CourseDetailsComponent implements OnInit {
-  module = signal<any>('');
+  module = signal<any>({});
   courseName = input.required<string>();
   showingMore = signal<boolean>(false);
+  id : any;
   private courseService = inject(CourseService);
   private coursesData = inject(CourseService);
   private httpClient = inject(HttpClient);
   private destroyRef = inject(DestroyRef);
-
+  
+  constructor(private router : Router) {}
+  
   ngOnInit() {
-    const subscription = this.httpClient.get(`http://localhost:3000/api/module/${this.selectedCourse().id}`)
+    const currentPath = this.router.url;
+    const match = currentPath.match(/\/(\d+)$/);
+    this.id = match ? parseInt(match[1], 10) : null;
+    
+    const subscription = this.httpClient.get(`http://localhost:3000/api/module/${this.id}`)
     .subscribe({
       next: (responseData : any) => {
-        console.log("Coming from courses-details");
-        this.module.set(responseData.data);
-        console.log(this.module());
+        this.module.set(responseData.data[0]);
       },
       error: (error) => {
         console.log(error)
@@ -42,11 +47,11 @@ export class CourseDetailsComponent implements OnInit {
   }
 
   get coursesArray() {
-    return this.coursesData.courses;
+    return this.coursesData.modules();
   }
 
   selectedCourse = computed(
-    () => this.courseService.courses.find((course) => course.title === this.courseName())!
+    () => this.courseService.modules().find((course) => course.course_name === this.courseName())!
   );
 
   onShowMore() {

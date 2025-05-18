@@ -10,6 +10,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './course.component.css'
 })
 export class CourseComponent {
-  courseData = input.required<courseType>();
+  courseData = input.required<any>();
   activePage = input.required<string>();
 }

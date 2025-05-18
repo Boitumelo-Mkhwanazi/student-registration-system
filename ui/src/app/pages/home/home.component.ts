@@ -21,7 +21,7 @@ export class HomeComponent {
   private coursesData = inject(CourseService);
 
   get coursesArray() {
-    return this.coursesData.courses;
+    return this.coursesData.modules();
   }
 
   get cardsArray() {

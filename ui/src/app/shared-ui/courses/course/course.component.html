@@ -1,25 +1,25 @@
 <div class="course">
-    <img [src]="courseData().image" alt="">
+    <img [src]="courseData()?.img_url" alt="">
     <div class="course-details">
         <div class="course-details-header">
-            <p>{{ courseData().faculty }}</p>
+            <p>{{ courseData()?.faculty_name }}</p>
             <div class="rating">
                 <ion-icon name="star"></ion-icon>
-                <span>{{ courseData().rating }}</span>
+                <span>{{ courseData()?.number_of_students }}</span>
             </div>
         </div>
-        <p class="title">{{ courseData().title }}</p>
+        <p class="title">{{ courseData()?.course_name }}</p>
         <div class="course-details-footer">
             <div class="left">
                 <ion-icon name="people-outline"></ion-icon>
-                <p> {{ courseData().studentsCount }} <span>students</span></p>
+                <p> {{ courseData()?.number_of_students }} <span>students</span></p>
             </div>
             @if(activePage() === 'Courses Page') {
-                <a [routerLink]="['/courses', courseData().title]" >Learn More</a>
+                <a [routerLink]="['/courses', courseData()?.course_id]" >Learn More</a>
             } @else {
-                <a [routerLink]="['/dashboard/modules', courseData().title]" >Learn More</a>
+                <a [routerLink]="['/dashboard/modules', courseData()?.course_id]" >Learn More</a>
             }
-            <a [routerLink]="['/courses', courseData().title]" class="open"><ion-icon name="open-outline"></ion-icon></a>
+            <a [routerLink]="['/courses', courseData()?.course_name]" class="open"><ion-icon name="open-outline"></ion-icon></a>
             
         </div>
     </div>

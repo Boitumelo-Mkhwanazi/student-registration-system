@@ -2,16 +2,16 @@
     <div class="inner-hero">
         <div class="hero-text">
             <div class="description">
-                <p>Courses > <span>{{ selectedCourse().title }}</span></p>
-                <h2>{{ selectedCourse().title }}</h2>
+                <p>Courses > <span>{{ module().course_name }}</span></p>
+                <h2>{{ module().course_name }}</h2>
                 <p>
-                    {{ selectedCourse().description }}
+                    {{ module().description }}
                 </p>
             </div>
             <div class="buttons-container">
                 <a href="/sign-up" class="btn">Enroll</a>
                 <div class="reviews">
-                    <span>{{ selectedCourse().rating }}</span>
+                    <span>{{ module().average_percentage }}</span>
                     <div class="stars">
                         <ion-icon name="star"></ion-icon>
                         <ion-icon name="star"></ion-icon>
@@ -20,11 +20,11 @@
                         <ion-icon name="star"></ion-icon>
                     </div>
                 </div>
-                <p>{{ selectedCourse().studentsCount }} students </p>
+                <p>{{ module().number_of_students }} students </p>
             </div>
         </div>
         <div class="image-container">
-            <img [src]="selectedCourse().image" alt="">
+            <img [src]="module().img_url" alt="">
         </div>
     </div>
 </section>
@@ -33,7 +33,7 @@
     <div class="course-details-1">
         <div class="course-description">
             <h3>What You'll Learn</h3>
-            <p [class.show-all]="showingMore()">{{ selectedCourse().detailed_description }}</p>
+            <p [class.show-all]="showingMore()">{{ module().description }}</p>
             <div class="show-more">
                 @if (!showingMore()) {
                     <span>Show more</span>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="instructor-information">
                     <div class="header">
-                        <h3>{{ selectedCourse().instructorId }}</h3>
+                        <h3>{{ module().instructor_name }}</h3>
                         <p>Advanced Educator</p>
                     </div>
                     <div class="mid">
@@ -80,7 +80,7 @@
         </div>
         <div class="featured-courses">
             <div class="header">
-                <h3>More Courses by {{ selectedCourse().instructorId }}</h3>
+                <h3>More Courses by {{ module().instructor_name }}</h3>
                 <a href="">View All Courses</a>
             </div>
             <div class="cards">
@@ -91,9 +91,9 @@
     </div>
     <div class="course-details-2"> 
         <div class="mid-container">
-            <h3>R{{ selectedCourse().fee }} <span>R150.00</span></h3>
+            <h3>R{{ module().course_price }} <span>R150.00</span></h3>
             <div class="enroll-text">
-                <a [routerLink]="['/courses', selectedCourse().title, 'confirmation']" class="btn">Enroll</a>
+                <a [routerLink]="['/courses', module().course_name, 'confirmation']" class="btn">Enroll</a>
                 <p>Get the best learning experience</p>
             </div>
             <div class="information">
@@ -106,7 +106,7 @@
                 <div class="line">
                     <p class="left">Enrolled</p>
                     <div class="right-container">
-                        <p class="right">{{ selectedCourse().studentsCount }}</p>
+                        <p class="right">{{ module().number_of_students }}</p>
                     </div>
                 </div>
                 <div class="line">

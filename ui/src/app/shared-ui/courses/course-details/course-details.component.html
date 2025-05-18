@@ -4,16 +4,16 @@
     <div class="inner-hero">
         <div class="hero-text">
             <div class="description">
-                <p>Courses > <span>{{ selectedCourse().title }}</span></p>
-                <h2>{{ selectedCourse().title }}</h2>
+                <p>Courses > <span>{{ module().course_name }}</span></p>
+                <h2>{{ module().course_name }}</h2>
                 <p>
-                    {{ selectedCourse().description }}
+                    {{ module().overview }}
                 </p>
             </div>
             <div class="buttons-container">
                 <a href="/sign-up" class="btn">Enroll</a>
                 <div class="reviews">
-                    <span>{{ selectedCourse().rating }}</span>
+                    <span>{{ module().number_of_students }}</span>
                     <div class="stars">
                         <ion-icon name="star"></ion-icon>
                         <ion-icon name="star"></ion-icon>
@@ -22,11 +22,11 @@
                         <ion-icon name="star"></ion-icon>
                     </div>
                 </div>
-                <p>{{ selectedCourse().studentsCount }} students </p>
+                <p>{{ module().number_of_students }} students </p>
             </div>
         </div>
         <div class="image-container">
-            <img [src]="selectedCourse().image" alt="">
+            <img [src]="module().img_url" alt="">
         </div>
     </div>
 </section>
@@ -35,7 +35,7 @@
     <div class="course-details-1">
         <div class="course-description">
             <h3>What You'll Learn</h3>
-            <p [class.show-all]="showingMore()">{{ selectedCourse().detailed_description }}</p>
+            <p [class.show-all]="showingMore()">{{ module().description }}</p>
             <div class="show-more">
                 @if (!showingMore()) {
                     <span>Show more</span>
@@ -55,23 +55,23 @@
                 </div>
                 <div class="instructor-information">
                     <div class="header">
-                        <h3>{{ selectedCourse().instructorId }}</h3>
+                        <h3>{{ module().instructor_name }}</h3>
                         <p>Advanced Educator</p>
                     </div>
                     <div class="mid">
                         <div class="mid-1">
                             <ion-icon name="star"></ion-icon>
-                            <p class="review">75,235 reviews</p>
+                            <p class="review">0 reviews</p>
                         </div>
-                        <p class="rating">4.4 rating</p>
+                        <p class="rating">0 rating</p>
                         <div class="mid-2">
                             <div class="icon-container">
                                 <ion-icon name="videocam-outline"></ion-icon>
                             </div>
-                            <p>20 Courses</p>
+                            <p>{{ module().total_courses_by_instructor}} Courses</p>
                         </div>
                     </div>
-                    <p>John Is A Brilliant Educator, Who Life Was Spent For Computer Science And Love Of Nature</p>
+                    <p>{{ module().instructor_name}} Is A Brilliant Educator, Who Life Was Spent For Computer Science And Love Of Nature</p>
                     <div class="social-media-icons">
                         <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
                         <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
@@ -93,9 +93,9 @@
     </div>
     <div class="course-details-2"> 
         <div class="mid-container">
-            <h3>R{{ selectedCourse().fee }} <span>R150.00</span></h3>
+            <h3>R{{ module().course_price }} <span>R150.00</span></h3>
             <div class="enroll-text">
-                <a [routerLink]="['/courses', selectedCourse().title, 'confirmation']" routerLinkActive="router-link-active"  routerLinkActive="router-link-active"  class="btn">Enroll</a>
+                <a [routerLink]="['/courses', module().course_id, 'confirmation']" routerLinkActive="router-link-active"  routerLinkActive="router-link-active"  class="btn">Enroll</a>
                 <p>Get the best learning experience</p>
             </div>
             <div class="information">
@@ -108,7 +108,7 @@
                 <div class="line">
                     <p class="left">Enrolled</p>
                     <div class="right-container">
-                        <p class="right">{{ selectedCourse().studentsCount }}</p>
+                        <p class="right">{{ module().number_of_students }}</p>
                     </div>
                 </div>
                 <div class="line">

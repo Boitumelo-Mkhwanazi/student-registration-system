@@ -18,15 +18,15 @@ export class CoursesComponent {
   
   get coursesArray() {
     if (this.selectedFaculty() === 'Business and Management') {
-      return this.coursesData.courses.filter((course) => course.faculty === this.facultiesArray[0].name)
+      return this.coursesData.modules().filter((course) => course.faculty_name === this.facultiesArray[0].name)
     } else if (this.selectedFaculty() === 'Environmental and Natural Sciences') {
-      return this.coursesData.courses.filter((course) => course.faculty === this.facultiesArray[1].name)
+      return this.coursesData.modules().filter((course) => course.faculty_name === this.facultiesArray[1].name)
     } else if (this.selectedFaculty() === 'Media and Communication') {
-      return this.coursesData.courses.filter((course) => course.faculty === this.facultiesArray[2].name)
+      return this.coursesData.modules().filter((course) => course.faculty_name === this.facultiesArray[2].name)
     } else if (this.selectedFaculty() === 'Technology and Computer Science') {
-      return this.coursesData.courses.filter((course) => course.faculty === this.facultiesArray[3].name)
+      return this.coursesData.modules().filter((course) => course.faculty_name === this.facultiesArray[3].name)
     }
-    return this.coursesData.courses;
+    return this.coursesData.modules();
   }
 
   get facultiesArray() {

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { DestroyRef, inject, Injectable, signal } from '@angular/core';
-import { map } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 type faculty = 'Health Science' | 'Science' | 'Engineering';
 
@@ -18,7 +18,7 @@ export interface courseType {
 }
 
 export interface ModuleType {
-  id: number,
+  course_id: number,
   image: string,
   faculty_name : string,
   course_name : string,
@@ -28,8 +28,9 @@ export interface ModuleType {
 
 @Injectable({ providedIn: 'root' })
 export class CourseService {
+  module = signal<any>('');
   modules = signal<ModuleType[]>([]);
-  courses: courseType[] = [
+  /*courses: courseType[] = [
     {
       id: 1,
       image: 'courses/data_science.avif',
@@ -147,7 +148,7 @@ export class CourseService {
       rating: 4.7,
       fee: 290.0,
     },
-  ];
+  ]; */
   private destroyRef = inject(DestroyRef);
   private httpClient = inject(HttpClient);
 
@@ -156,6 +157,7 @@ export class CourseService {
     .subscribe({
       next: (responseData: any) => {
         this.modules.set(responseData.data)
+        // console.log(this.modules());
       },
       error: (error) => {
         console.log(error)
@@ -167,20 +169,41 @@ export class CourseService {
     })
   }
 
+  getCoursesById(id: number) : Observable<any> {
+    return this.httpClient.get(`http://localhost:3000/api/module/${id}`)
+  }
+
   filteredCourses(selectedcourse: string) {
     if (selectedcourse === 'All') {
-      return this.courses;
+      return this.modules();
     }
-    return this.courses.filter((course) => course.faculty === selectedcourse);
+    return this.modules().filter((module) => module.faculty_name === selectedcourse);
   }
 
   sortByPopularity(popularityStatus: string) {
     if (popularityStatus === 'Most Popular') {
-      return this.courses.filter((course) => course.studentsCount >= 100);
+      return this.modules().filter((course) => course.number_of_students >= 100);
     } else if(popularityStatus === "Least Popular") {
-      return this.courses.filter((course) => course.studentsCount < 30)
+      return this.modules().filter((course) => course.number_of_students < 30)
     }
 
-    return this.courses;
+    return this.modules();
+  }
+
+  selectedCourse(id : number) {
+    const subscription = this.httpClient.get(`http://localhost:3000/api/module/${id}`)
+    .subscribe({
+      next: (responseData : any) => {
+        console.log("Coming from courses-details");
+        this.module.set(responseData.data);
+      },
+      error: (error) => {
+        console.log(error)
+      }
+    })
+
+    this.destroyRef.onDestroy(() => {
+      subscription.unsubscribe();
+    })
   }
 }
