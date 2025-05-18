@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { DestroyRef, inject, Injectable } from '@angular/core';
+import { DestroyRef, inject, Injectable, signal } from '@angular/core';
 import { map } from 'rxjs';
 
 type faculty = 'Health Science' | 'Science' | 'Engineering';
 
 export interface courseType {
-  id: string;
+  id: number;
   image: string
   title: string;
   description: string;
@@ -17,30 +17,21 @@ export interface courseType {
   fee: number
 }
 
+export interface ModuleType {
+  id: number,
+  image: string,
+  faculty_name : string,
+  course_name : string,
+  number_of_students: number,
+  average_percentage : number
+} 
+
 @Injectable({ providedIn: 'root' })
 export class CourseService {
-  private destroyRef = inject(DestroyRef);
-  private httpClient = inject(HttpClient);
-
-  constructor() {
-    const subscription = this.httpClient.get("http://localhost:3000/api/module")
-    .subscribe({
-      next: (responseData) => {
-        //console.log(responseData)
-      },
-      error: (error) => {
-        console.log(error)
-      }
-    })
-
-    this.destroyRef.onDestroy(() => {
-      subscription.unsubscribe();
-    })
-  }
-
+  modules = signal<ModuleType[]>([]);
   courses: courseType[] = [
     {
-      id: '1',
+      id: 1,
       image: 'courses/data_science.avif',
       title: 'Data Science',
       description: 'Introduction to data science and machine learning.',
@@ -53,7 +44,7 @@ export class CourseService {
       fee: 150.0,
     },
     {
-      id: '2',
+      id: 2,
       image: 'courses/web_development.avif',
       title: 'Web Development',
       description: 'Learn full-stack web development with modern technologies.',
@@ -66,7 +57,7 @@ export class CourseService {
       fee: 270.0,
     },
     {
-      id: '3',
+      id: 3,
       image: 'courses/artificial_intelligence.avif',
       title: 'Artificial Intelligence',
       description: 'Fundamentals of AI, deep learning, and neural networks.',
@@ -79,7 +70,7 @@ export class CourseService {
       fee: 170.0,
     },
     {
-      id: '4',
+      id: 4,
       image: 'courses/mechanical_engineering.avif',
       title: 'Mechanical Engineering',
       description: 'Study of mechanical systems and design principles.',
@@ -92,7 +83,7 @@ export class CourseService {
       fee: 250.0,
     },
     {
-      id: '5',
+      id: 5,
       image: 'courses/electrical_engineering.avif',
       title: 'Electrical Engineering',
       description: 'Exploring electrical circuits, power systems, and electronics.',
@@ -105,7 +96,7 @@ export class CourseService {
       fee: 320.0,
     },
     {
-      id: '6',
+      id: 6,
       image: 'courses/civil_engineering.avif',
       title: 'Civil Engineering',
       description: 'Infrastructure design, construction, and urban planning.',
@@ -118,7 +109,7 @@ export class CourseService {
       fee: 190.0,
     },
     {
-      id: '7',
+      id: 7,
       image: 'courses/medicine.avif',
       title: 'Medicine',
       description: "Study of the human body's structure and function.",
@@ -131,7 +122,7 @@ export class CourseService {
       fee: 350.0,
     },
     {
-      id: '8',
+      id: 8,
       image: 'courses/pharmacology.avif',
       title: 'Pharmacology',
       description: 'Understanding drugs and their effects on the human body.',
@@ -144,7 +135,7 @@ export class CourseService {
       fee: 240.0,
     },
     {
-      id: '9',
+      id: 9,
       image: 'courses/bacteria.avif',
       title: 'Public Health',
       description: 'Examining healthcare policies and disease prevention.',
@@ -157,6 +148,24 @@ export class CourseService {
       fee: 290.0,
     },
   ];
+  private destroyRef = inject(DestroyRef);
+  private httpClient = inject(HttpClient);
+
+  constructor() {
+    const subscription = this.httpClient.get("http://localhost:3000/api/module")
+    .subscribe({
+      next: (responseData: any) => {
+        this.modules.set(responseData.data)
+      },
+      error: (error) => {
+        console.log(error)
+      }
+    })
+
+    this.destroyRef.onDestroy(() => {
+      subscription.unsubscribe();
+    })
+  }
 
   filteredCourses(selectedcourse: string) {
     if (selectedcourse === 'All') {

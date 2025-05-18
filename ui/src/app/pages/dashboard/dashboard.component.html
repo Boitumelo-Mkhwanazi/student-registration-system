@@ -69,8 +69,11 @@
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
             <div class="search-bar">
-                <ion-icon name="search-outline"></ion-icon>
-                <input type="text" placeholder="Search for a course here">
+                <button (keydown)="search()" (click)="search()"><ion-icon name="search-outline"></ion-icon></button>
+                <form (ngSubmit)="search()">
+                    <input name="search" [(ngModel)]="searchTerm" type="text" placeholder="Search for a course here">
+                </form>
+                
             </div>
             <div class="nav">
                 <a href="">My Lesson</a>

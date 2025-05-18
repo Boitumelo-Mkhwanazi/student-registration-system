@@ -139,11 +139,10 @@ ALTER TABLE module DROP FOREIGN KEY module_ibfk_3;
 ALTER TABLE module 
 DROP COLUMN assessment_id;
 
+ALTER TABLE module
+ADD img_url VARCHAR(255) NULL;
 
 
-
-
-  
 -- ======== INSERT SCRIPTS ========
 
 -- Insert lectureres

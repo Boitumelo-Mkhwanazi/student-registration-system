@@ -31,7 +31,7 @@ export class ConfirmationComponent {
   }
 
   addNewCourse() {
-    this.userService.addNewCourse(this.selectedCourse());
-    console.log(this.userService.courses);
+    //this.userService.addNewCourse(this.selectedCourse());
+    //console.log(this.userService.courses);
   }
 }
