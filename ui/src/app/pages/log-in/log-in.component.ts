@@ -1,5 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { User } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'app-log-in',
@@ -19,6 +20,7 @@ export class LogInComponent {
       }),
     })
   })
+
 
   get isEmailInvalid() {
     return this.form.controls.security.controls.email.touched && this.form.controls.security.controls.email.invalid && this.form.controls.security.controls.email.dirty;

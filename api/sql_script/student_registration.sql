@@ -139,9 +139,14 @@ ALTER TABLE module DROP FOREIGN KEY module_ibfk_3;
 ALTER TABLE module 
 DROP COLUMN assessment_id;
 
+-- Add the img_url attribute
 ALTER TABLE module
 ADD img_url VARCHAR(255) NULL;
 
+-- add data 
+UPDATE module
+SET img_url = 'https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+WHERE name = 'Introduction to Web Development';
 
 -- ======== INSERT SCRIPTS ========
 

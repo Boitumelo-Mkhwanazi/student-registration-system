@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="form-container">
-            <form action="" [formGroup]="form">
+            <form action="" [formGroup]="form" (ngSubmit)="handleSubmit($event)">
                 <h2>Create an account</h2>
                 <div class="form">
                     <div class="names" formGroupName="names">

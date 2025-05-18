@@ -32,7 +32,7 @@ export class AuthService {
       .post('http://localhost:3000/api/auth/login', user)
       .pipe(
         tap((tokens: any) => {
-          this.doLoginUser(user.email, JSON.stringify(tokens));
+          this.doLoginUser(user.email??'', JSON.stringify(tokens));
         })
       );
   }

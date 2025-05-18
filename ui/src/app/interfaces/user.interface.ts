@@ -4,18 +4,18 @@ enum UserRole {
 }
 
 export interface User {
-  id: number;
-  name: string,
-  surname: string,
-  email: string;
-  password: string;
-  role: UserRole;
-  gender: string,
-  address: string,
-  city: string,
-  postal_code: string,
-  country: string,
-  dob: string,
+  id?: number ;
+  name?: string,
+  surname?: string,
+  email?: string;
+  password?: string;
+  role?: UserRole;
+  gender?: string,
+  address?: string,
+  city?: string,
+  postal_code?: string,
+  country?: string,
+  dob?: string,
 }
 
 export interface Student {
