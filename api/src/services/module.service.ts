@@ -79,3 +79,8 @@ export const getModuleById = async (id: number) => {
     [id]
   );
 };
+
+// Get all faculties
+export const getFaculties = async () => {
+  return await query("SELECT * FROM faculty");
+};
