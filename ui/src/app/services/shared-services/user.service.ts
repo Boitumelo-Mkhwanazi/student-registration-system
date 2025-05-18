@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 type faculty = 'Health Science' | 'Science' | 'Engineering';
 
 export interface courseType {
-  id: string;
+  id: number;
   image: string
   title: string;
   description: string;

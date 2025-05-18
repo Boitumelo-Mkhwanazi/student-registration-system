@@ -15,6 +15,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './course-details.component.css'
 })
 export class CourseDetailsComponent implements OnInit {
+  module = signal<any>('');
   courseName = input.required<string>();
   showingMore = signal<boolean>(false);
   private courseService = inject(CourseService);
@@ -25,8 +26,10 @@ export class CourseDetailsComponent implements OnInit {
   ngOnInit() {
     const subscription = this.httpClient.get(`http://localhost:3000/api/module/${this.selectedCourse().id}`)
     .subscribe({
-      next: (responseData) => {
-        console.log(responseData)
+      next: (responseData : any) => {
+        console.log("Coming from courses-details");
+        this.module.set(responseData.data);
+        console.log(this.module());
       },
       error: (error) => {
         console.log(error)
@@ -37,6 +40,7 @@ export class CourseDetailsComponent implements OnInit {
       subscription.unsubscribe();
     })
   }
+
   get coursesArray() {
     return this.coursesData.courses;
   }

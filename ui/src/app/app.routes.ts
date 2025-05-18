@@ -39,7 +39,7 @@ export const routes: Routes = [
     // You can do this to other routes this is just an example
     // you can also right your own specific guards to only let
     // lectures access certain pages or only admins just check out Angular guards on how to do that
-    canActivate: [authGuard]
+    //canActivate: [authGuard]
   },
   {
     path: 'courses/:courseName',
@@ -69,7 +69,7 @@ export const routes: Routes = [
     children: [
       {
         path: 'overview',
-        component: OverviewComponent
+        component: OverviewComponent,
       },
       {
         path: 'modules',
@@ -81,23 +81,27 @@ export const routes: Routes = [
       },
       {
         path: 'my-courses',
-        component: MyCoursesComponent
+        component: MyCoursesComponent,
+        canActivate: [authGuard]
       },
       {
         path: 'timetable',
-        component: TimetableComponent
+        component: TimetableComponent,
+        canActivate: [authGuard]
       },
       {
         path: 'assessments',
-        component: AssessmentsComponent
+        component: AssessmentsComponent,
+        canActivate: [authGuard]
       },
       {
         path: 'profile',
-        component: ProfileComponent
+        component: ProfileComponent,
       },
       {
         path: 'deposit',
-        component: DepositComponent
+        component: DepositComponent,
+        canActivate: [authGuard]
       }
     ]
   }
