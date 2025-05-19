@@ -1,4 +1,5 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
+import { AuthService } from "../auth/auth.service";
 
 type faculty = 'Health Science' | 'Science' | 'Engineering';
 
@@ -17,11 +18,11 @@ export interface courseType {
 
 @Injectable({ providedIn: 'root' })
 export class userService {
-    courses: courseType[] = [
-      
-    ]
+  private authService = inject(AuthService);
+  user : any;
+  courses: any[] = [];
 
-    addNewCourse(newCourse: courseType) {
-        this.courses = [...this.courses, newCourse]
-    }
+  constructor () {
+    this.user = this.authService.getCurrentUser();
+  }
 }

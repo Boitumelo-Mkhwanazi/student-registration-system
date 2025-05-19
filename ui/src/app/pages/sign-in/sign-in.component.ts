@@ -53,10 +53,10 @@ export class SignInComponent {
         password: this.form.value.security?.password??'',
       }
 
-      console.log(user);
+      console.log(this.authService.getCurrentUser());
 
       this.authService.signup(user).subscribe((res : any) => {
-        this.router.navigate(['/log-in'])
+        this.router.navigate(['dashboard/overview'])
       })
     }
   }
@@ -72,5 +72,7 @@ export class SignInComponent {
   get isConfirmPasswordValid() {
     return this.form.controls.security.controls.confirmPassword.touched && this.form.controls.security.controls.confirmPassword.invalid && this.form.controls.security.controls.confirmPassword.dirty;
   }
+
+  
 
 }

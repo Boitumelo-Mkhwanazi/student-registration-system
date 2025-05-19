@@ -1,7 +1,9 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { userService } from '../../../../services/shared-services/user.service';
 import { CourseComponent } from '../../../../shared-ui/courses/course/course.component';
 import { RouterLink } from '@angular/router';
+import { AuthService } from '../../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-overview',
@@ -11,9 +13,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './overview.component.css'
 })
 export class OverviewComponent {
-  private userService = inject(userService);
+  userService = inject(userService);
+  authService = inject(AuthService);
+  user: any;
+  userCourses: any[];
 
-  get userCourses () {
-    return this.userService.courses;
+  constructor () {
+    this.user = this.authService.getCurrentUser();
+    this.userCourses = this.userService.courses; 
   }
+  
 }

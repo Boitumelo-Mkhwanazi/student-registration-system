@@ -8,6 +8,7 @@ import { FooterComponent } from '../../shared-ui/footer/footer.component';
 import { CourseService } from '../../services/shared-services/courses.service';
 import { CourseComponent } from '../../shared-ui/courses/course/course.component';
 import { NewsletterComponent } from "../../shared-ui/newsletter/newsletter.component";
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ import { NewsletterComponent } from "../../shared-ui/newsletter/newsletter.compo
 export class HomeComponent {
   homeService = inject(HomeService);
   private coursesData = inject(CourseService);
+  authService = inject(AuthService)
 
   get coursesArray() {
     return this.coursesData.modules();
@@ -30,5 +32,9 @@ export class HomeComponent {
 
   get stepsArray() {
     return this.homeService.stepsArray;
+  }
+
+  handleLogOut(){
+    this.authService.logout();
   }
 }

@@ -3,6 +3,7 @@ import { CourseService, courseType } from '../../../services/shared-services/cou
 import { userService } from '../../../services/shared-services/user.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { RegistrationService } from '../../../services/shared-services/registration.service';
 
 @Component({
   selector: 'app-confirmation',
@@ -14,7 +15,8 @@ import { HttpClient } from '@angular/common/http';
 export class ConfirmationComponent {
   module = signal<any>({});
   id : any;
-  courseName = input.required<string>()
+  courseName = input.required<string>();
+  studentId = 10; // Example value
   accordionFirstOne = signal<boolean>(false);
   accordionTwoOpen = signal<boolean>(false);
   private courseService = inject(CourseService);
@@ -22,7 +24,7 @@ export class ConfirmationComponent {
   private httpClient = inject(HttpClient);
   private destroyRef = inject(DestroyRef);
 
-  constructor(private router : Router) {}
+  constructor(private router : Router, private registrationService : RegistrationService) {}
   
   ngOnInit() {
     const currentPath = this.router.url;
@@ -63,8 +65,15 @@ export class ConfirmationComponent {
     this.accordionTwoOpen.set(!this.accordionTwoOpen());
   }
 
-  addNewCourse() {
-    //this.userService.addNewCourse(this.selectedCourse());
-    //console.log(this.userService.courses);
+  register() {
+    if (!this.studentId || !this.id) {
+      alert('Student ID and Module ID are required');
+      return;
+    }
+
+    this.registrationService.registerModule(this.studentId, this.id).subscribe({
+      next: () => alert('Module registered successfully'),
+      error: () => alert('Failed to register module'),
+    });
   }
 }

@@ -64,6 +64,16 @@ authRouter.post("/login", async (req: Request, res: Response) => {
     const token = jwt.sign(
       {
         id: user.id,
+        name: user.name,
+        surname: user.surname,
+        role: user.role,
+        gender: user.gender,
+        address: user.address,
+        city: user.city,
+        postalCode: user.postalCode,
+        country: user.country,
+        dob: user.dob,
+        age: user.age
         // add anthing else you need here
         // e.g firstname: user.firstname
       },

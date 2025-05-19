@@ -32,7 +32,7 @@ export class AuthService {
       .post('http://localhost:3000/api/auth/login', user)
       .pipe(
         tap((tokens: any) => {
-          this.doLoginUser(user.email??'', JSON.stringify(tokens));
+          this.doLoginUser(user.email??'', JSON.stringify(tokens.data));
         })
       );
   }
@@ -51,7 +51,7 @@ export class AuthService {
     this.loggedUser = "";
     this.localStorage.remove(this.JWT_TOKEN);
     this.isAuthenticatedSubject.next(false);
-    this.router.navigate(['/sign-in']);
+    this.router.navigate(['/log-in']);
   }
 
   // decodes the jwt token to return the data of the currently  logged in user

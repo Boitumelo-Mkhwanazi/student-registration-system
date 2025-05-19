@@ -24,7 +24,7 @@ export class DashboardComponent {
 
   search() {
     this.router.navigate(['/dashboard/modules']).then(() => {
-      this.httpClient.get<ModuleType[]>(
+      this.httpClient.get<any>(
         'http://localhost:3000/api/module',
         {
           params: {
@@ -35,7 +35,7 @@ export class DashboardComponent {
         }
       ).subscribe({
         next: (modules) => {
-          console.log(modules);
+          this.modules.modules.set(modules.data);
         },
         error: (err) => console.error(err)
       });

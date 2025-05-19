@@ -31,9 +31,10 @@
                 <span>Show: </span>
                 <select name="filter" id="filterCourses" [(ngModel)]="enteredCourseCategory">
                     <option value="All">All Courses</option>
-                    <option value="Health Science">Health Science Courses</option>
-                    <option value="Science">Science Courses</option>
-                    <option value="Engineering">Engineering Courses</option>
+                    <option value="Business and Management">{{ AllFaculties[0].name }}</option>
+                    <option value="Enviromental and Natural Sciences">{{ AllFaculties[1].name }}</option>
+                    <option value="Media and Communication">{{ AllFaculties[2].name }}</option>
+                    <option value="Technology and Computer Science">{{ AllFaculties[3].name }}</option>
                 </select>
             </div>
         </div>
